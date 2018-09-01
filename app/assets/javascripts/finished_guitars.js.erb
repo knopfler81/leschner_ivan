@@ -1,0 +1,8 @@
+$(function() {
+	Dropzone.autodiscover = false;
+	$("#my-dropzone").dropzone({
+			maxFilesize: 2,
+			addRemoveLinks: true,
+			paramName: "finished_guitars[:attachments]['images']",
+			});
+});

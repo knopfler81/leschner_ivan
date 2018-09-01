@@ -1,0 +1,22 @@
+	<%= simple_form_for @finished_guitar, html: {multipart: true } do |f| %>
+		<%= f.input :title %>
+		<%= f.input :description %>
+
+<div class="content">
+		<div class="dz-message needsclick">
+			<h3>Drop file here</h3> or
+			<strong>click</strong> to upload
+		</div>
+		<div class="fallback">		
+			<br><br>
+		<%= f.simple_fields_for :attachments do |ff| %>
+			<%= ff.input_field :image, as: :file, multiple: true, name: "finished_guitar[attachments_attributes][][image]" %>
+		<% end %>
+		</div>
+					<br><br>
+
+		<%= f.button :submit, class: "btn btn-primary" %>
+	<% end %>	  
+</div>
+
+<!-- , html: { id: "my-dropzone", class: "dropzone"}  -->

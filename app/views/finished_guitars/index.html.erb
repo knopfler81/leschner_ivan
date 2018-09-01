@@ -1,0 +1,10 @@
+<div class="container">
+	<% @finished_guitars.each do |guitar| %>
+		<ul>
+			<li>
+				<h3><%= guitar.title %></h3> 
+				<%= link_to 'Destroy', finished_guitar_path(guitar), class:'btn btn-danger', method: :delete, data: {confirm: "Are you sure?"} %>
+			</li>
+		</ul>
+	<% end %>
+</div>
