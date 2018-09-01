@@ -1,0 +1,2 @@
+class FinishedGuitar < ApplicationRecord
+end
