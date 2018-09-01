@@ -1,0 +1,61 @@
+.bg-image {
+	background-image    : url("https://s3-eu-west-1.amazonaws.com/leschnerguitars/head.jpg");
+  margin-top          : -50px;
+  -webkit-filter      : grayscale(20%);
+  background-size     : cover;
+  background-repeat   : no-repeat;
+  background-position : center;
+  height              : 55vh;
+}
+
+
+// thumbnail avec effets
+.make-it-slow {
+  a:hover {;
+    text-decoration   : none;
+  }
+  box-shadow          : 0 1px 2px rgba(0,0,0,0.15);
+  transition          : box-shadow 0.3s ease-in-out
+}
+
+.make-it-slow:hover {
+  box-shadow          :  0 5px 25px rgba(0,0,0,0.8);
+}
+
+.company-work {
+  text-align          : center;
+  margin              : 30px 60px;
+}
+
+.welcome-text {
+  margin-top          : 18%;
+  color               : #ffffff;
+  position            : relative;
+  z-index             : 5;
+
+  h1 {
+    font-size         : 40px;
+  }
+  p {
+    font-size         : 20px;
+  }
+ }
+
+@media screen and (max-width: 720px) {
+  .welcome-text {
+    margin-left       : 5%;
+
+    h1 {
+      font-size       : 30px;
+    }
+    p {
+      font-size       : 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 990px){
+  .welcome-text{
+    margin-left       : 5%;
+  }
+}

@@ -3,3 +3,32 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+@import "home";
+@import "navbar";
+
+body {
+  color              : #333;
+  font-family        : verdana, arial, helvetica, sans-serif;
+  font-size          : 13px;
+  line-height        : 18px;
+}
+
+h1, h2, h3 {
+  font-family: 'leschnerfont' !important
+}
+
+.text-gold{
+  color: #75521a;
+  font-size: 18px;
+}
+
+
+.diapo {
+  width: 100%;
+}
+
+.btn-gold {
+  background-color: #75521a !important;
+  color: #eee !important;
+}
