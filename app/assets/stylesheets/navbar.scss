@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #141414;
+  z-index: 100;
+  a {
+    color: #eee;
+  }
+  a:hover { 
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-bottom: 4px solid  #AB813E !important;
+    padding-bottom: 0;
+  }
+}
+
+.navbar-nav > li > .dropdown-menu {
+  a:hover {
+    background-color: #AB813E !important;
+  }
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-bottom: 4px solid  #AB813E !important;
+}
+
+.leschner-brand { 
+  margin: 10px;
+  color: #eee !important;
+  font-family: 'leschnerfont';
+  a:hover {
+    color: #eee;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #eee;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    li {
+      background-color: #75521a;
+    }
+    a:hover{
+      background-color: #AB813E !important;
+      border-bottom: none !important;
+    }
+  }
+
+  .icon-bar {
+    background-color: #eee;
+  }
+
+  .media {
+    text-align: center;
+    ul{
+      list-style: none;
+    }
+    li{
+      margin-bottom: 10px;
+    }
+  }
+}
