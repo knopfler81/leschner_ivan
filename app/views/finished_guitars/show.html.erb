@@ -1,6 +1,7 @@
 <div class="container">
-	<%= @finished_guitar.title %>
-	<%= @finished_guitar.description %>
+	<h1><%= @finished_guitar.title %></h1>
+	<p><%= @finished_guitar.description %></p>
+
 	<% @finished_guitar.attachments.each do |g| %>
 		<%= image_tag g.image.url %>
 	<% end %>

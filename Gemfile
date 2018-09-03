@@ -19,7 +19,7 @@ gem 'jquery-rails'
 
 
 gem "paperclip"
-gem "dropzonejs-rails"
+#gem "dropzonejs-rails"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
