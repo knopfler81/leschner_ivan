@@ -1,8 +1,3 @@
-//= require rails-ujs
-//= require jquery
-//= require_tree .
-
-
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 
 (function(){
