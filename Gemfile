@@ -20,6 +20,8 @@ gem 'jquery-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem "paperclip"
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
