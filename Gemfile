@@ -18,11 +18,7 @@ gem 'webpacker'
 gem 'jquery-rails'
 
 gem 'bcrypt', '~> 3.1.7'
-
-
 gem "paperclip"
-#gem "dropzonejs-rails"
-
 
 group :development do
   gem 'web-console', '>= 3.3.0'
