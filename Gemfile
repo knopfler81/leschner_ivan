@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.1'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
@@ -18,7 +18,14 @@ gem 'webpacker'
 gem 'jquery-rails'
 
 gem 'bcrypt', '~> 3.1.7'
-gem "paperclip"
+gem 'fog-aws'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem "mini_magick"
+
+gem 'faker'
+gem 'photoswipe-rails'
+
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

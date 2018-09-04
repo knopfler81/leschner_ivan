@@ -1,15 +1,54 @@
 //= require rails-ujs
 //= require jquery
+//= require tawk 
+//= require photoswipe
 //= require_tree .
 
 
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+// var openPhotoSwipe = function() {
+//     var pswpElement = document.querySelectorAll('.pswp')[0];
 
-(function(){
-	var s1= document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-	s1.async= true;
-	s1.src='https://embed.tawk.to/58e3ada4f97dd14875f5ba4a/default';
-	s1.charset='UTF-8';
-	s1.setAttribute('crossorigin','*');
-	s0.parentNode.insertBefore(s1,s0);
-})();
+
+//     var pics =  Array.from(document.getElementsByTagName('img'));
+
+//     // build items array
+//     var items = []
+
+//     pics.forEach(function(e){
+//     		    	items.push({src: e.src, w: 0, h: 0});
+//     		    	})
+    
+//     // define options (if needed)
+//     var options = {
+// 			 // history & focus options are disabled on CodePen        
+//       	history: false,
+//       	focus: false,
+//         showAnimationDuration: 0,
+//         hideAnimationDuration: 0,
+//         closeOnScroll: false,
+//         closeOnClick: false,
+//         //modal: false
+        
+//     };
+    
+//     var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    
+//     gallery.listen('gettingData', function(index, item) {
+//       if (item.w < 1 || item.h < 1) { // unknown size
+//         var img = new Image(); 
+//         img.onload = function() { // will get size after load
+// 	        item.w = this.width; // set image width
+// 	        item.h = this.height; // set image height
+// 	        gallery.invalidateCurrItems(); // reinit Items
+// 	        gallery.updateSize(true); // reinit Items
+//        	}
+//         img.src = item.src; // let's download image
+//       }
+//     });
+
+//     gallery.init();
+// };
+
+// openPhotoSwipe();
+
+// // document.getElementById('btn').onclick = openPhotoSwipe;
