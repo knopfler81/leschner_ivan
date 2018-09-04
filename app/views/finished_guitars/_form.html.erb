@@ -1,0 +1,16 @@
+
+
+<div class="row">
+	<div class="col-md-10 offset-md-1 col-xs-12">	
+	<%= simple_form_for @finished_guitar, html: { multipart: true } do |f| %>
+		<%= f.input :title %>
+		<%= f.input :description %>
+			<br><br>
+			<%= f.simple_fields_for :attachments do |ff| %>
+				<%= ff.input_field :image, as: :file, multiple: true , name: "finished_guitar[attachments_attributes][][image]" %>
+			<% end %>
+			<br><br>
+		<%= f.button :submit, class: "btn btn-primary" %>
+	<% end %>
+	</div>
+</div>
