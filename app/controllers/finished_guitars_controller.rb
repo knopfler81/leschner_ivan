@@ -1,9 +1,10 @@
 class FinishedGuitarsController < ApplicationController
 
+  before_action :find_finished_guitar, only: [:show, :destroy]
+  before_action :authorize, only: [:new, :create, :destroy]
 
-  before_action :find_finished_guitar, only: [:show, :update, :edit, :destroy]
   def index
-      @finished_guitars = FinishedGuitar.all
+    @finished_guitars = FinishedGuitar.all
   end
 
   def show
@@ -44,4 +45,6 @@ class FinishedGuitarsController < ApplicationController
     def find_finished_guitar
       @finished_guitar = FinishedGuitar.find(params[:id])
     end
+
+
 end

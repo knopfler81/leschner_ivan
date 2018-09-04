@@ -17,6 +17,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'jquery-rails'
 
+gem 'bcrypt', '~> 3.1.7'
+
 
 gem "paperclip"
 #gem "dropzonejs-rails"
