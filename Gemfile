@@ -19,15 +19,12 @@ gem 'jquery-rails'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'fog-aws'
-gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem "mini_magick"
 
-gem 'faker'
+
 gem 'photoswipe-rails'
-
-
-
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
