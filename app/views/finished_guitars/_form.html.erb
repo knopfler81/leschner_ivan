@@ -6,9 +6,7 @@
 		<%= f.input :title %>
 		<%= f.input :description %>
 			<br><br>
-			<%= f.simple_fields_for :attachments do |ff| %>
-				<%= ff.input_field :image, as: :file, multiple: true , name: "finished_guitar[attachments_attributes][][image]" %>
-			<% end %>
+				<%= f.file_field :attachments , multiple: true %>
 			<br><br>
 		<%= f.button :submit, class: "btn btn-primary" %>
 	<% end %>

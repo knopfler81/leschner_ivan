@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :guitars
   root to: 'home#index'
   resources :finished_guitars
-  resources :attachments
+
 
   get    "/admin",  to: "sessions#new"
   post   "/login",  to: "sessions#create"

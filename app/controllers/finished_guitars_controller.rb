@@ -12,23 +12,20 @@ class FinishedGuitarsController < ApplicationController
 
   def new
     @finished_guitar = FinishedGuitar.new
-    @attachment = @finished_guitar.attachments.build
   end
 
   def create
-    @finished_guitar = FinishedGuitar.new(finished_guitar_params)
-    respond_to do |format|
-      if @finished_guitar.save
-        unless params[:attachments].nil?
-          params[:attachments]['image'].each do |a|
-            @attachment = @finished_guitar.attachments.create!(:image => a)
-          end
-        end
-        format.html { redirect_to @finished_guitar, notice: 'Guitar was successfully created.' }
-      else
-        format.html { render action: 'new' }
-      end
-    end
+   @finished_guitar = FinishedGuitar.new(finished_guitar_params)
+
+     respond_to do |format|
+       if @finished_guitar.save
+         format.html { redirect_to @finished_guitar, notice: 'Guitar was successfully created.' }
+         format.json { render :show, status: :created, location: @finished_guitar }
+       else
+         format.html { render :new }
+         format.json { render json: @finished_guitar.errors, status: :unprocessable_entity }
+       end
+     end
   end
 
   def destroy
@@ -39,7 +36,7 @@ class FinishedGuitarsController < ApplicationController
   private
 
     def finished_guitar_params
-      params.require(:finished_guitar).permit(:id, :title, :description, attachments_attributes: [:id, :image, :finished_guitar_id])
+      params.require(:finished_guitar).permit(:id, :title, :description, {attachments:[]})
     end
 
     def find_finished_guitar

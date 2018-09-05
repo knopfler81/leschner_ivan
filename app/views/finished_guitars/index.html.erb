@@ -8,11 +8,11 @@
 			 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 							<%= link_to finished_guitar_path(guitar) do %>
 							 <div class="box panel">
-							 		<%= image_tag guitar.attachments.first.image.url %>
+							 		<%#= image_tag guitar.attachments.first.image.url %>
 							 		<div class="panel-body">
 			              <h4 class="text-gold"><%= guitar.title.upcase %></h4> 
 			              <h5><%= guitar.created_at.strftime("%d/%m/%Y")%></h5>
-			              <small><%#= truncate(guitar.description, length: 100) %></small> 
+			              <small><%= truncate(guitar.description, length: 100) %></small> 
 							 		</div>
 							 </div>
 						 <% end %>
