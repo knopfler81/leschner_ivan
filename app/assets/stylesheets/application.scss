@@ -14,10 +14,20 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-
-
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
 
+.modal_text {
+	margin: 10px;
+}
 
+
+.img_modal {
+	height: 50px;
+	border-radius: 50%;
+}
+
+.modal-header {
+	height: 80px;
+}
