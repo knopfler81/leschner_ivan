@@ -1,6 +1,6 @@
 class FinishedGuitarsController < ApplicationController
 
-  before_action :find_finished_guitar, only: [:show, :destroy]
+  before_action :find_finished_guitar, only: [:show, :destroy, :edit , :update]
   before_action :authorize, only: [:new, :create, :destroy]
 
   def index
@@ -26,6 +26,17 @@ class FinishedGuitarsController < ApplicationController
          format.json { render json: @finished_guitar.errors, status: :unprocessable_entity }
        end
      end
+  end
+
+  def edit
+  end
+
+  def update
+    if @finished_guitar.update(finished_guitar_params)
+      redirect_to @finished_guitar
+    else
+      render :edit
+    end
   end
 
   def destroy
