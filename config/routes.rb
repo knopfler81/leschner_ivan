@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   resources :finished_guitars
+  resources :videos
 
 
   get    "/admin",  to: "sessions#new"
