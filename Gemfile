@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.4'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
@@ -9,9 +9,9 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass', '~> 3.3'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 5.0.9'
-gem 'sass-rails'
+gem 'sass-rails', '>= 3.2'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
@@ -32,6 +32,13 @@ end
 
 group :development, :test do
 	gem 'rspec-rails', '~> 3.7'
+	gem 'launchy'
+	gem "chromedriver-helper" 
+	gem 'shoulda-matchers', '~> 3.1'
+	gem 'capybara'
+	gem "capybara-webkit"
+  gem 'capybara-screenshot'
+  gem 'rails-controller-testing'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

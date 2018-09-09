@@ -4,7 +4,7 @@ class FinishedGuitarsController < ApplicationController
   before_action :authorize, only: [:new, :create, :destroy]
 
   def index
-    @finished_guitars = FinishedGuitar.all
+    @finished_guitars = FinishedGuitar.order(created_at: :desc).all
   end
 
   def show
@@ -33,7 +33,7 @@ class FinishedGuitarsController < ApplicationController
 
   def update
     if @finished_guitar.update(finished_guitar_params)
-      redirect_to @finished_guitar
+      redirect_to @finished_guitar, notice: "Guitar was successfully updated"
     else
       render :edit
     end
@@ -41,7 +41,7 @@ class FinishedGuitarsController < ApplicationController
 
   def destroy
     @finished_guitar.destroy
-    redirect_to finished_guitars_path
+    redirect_to finished_guitars_path, notice: "Guitar was successfully destroyed"
   end
 
   private

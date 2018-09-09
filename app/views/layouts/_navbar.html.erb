@@ -5,7 +5,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <%= link_to "About", "#my-modal", "data-toggle"=>"modal", "data-target"=>".bd-example-modal-lg" %>
+        <%= link_to "About", "#about_modal", "data-toggle"=>"modal", "data-target"=>".bd-example-modal-lg" %>
       </li>
       <li class="nav-item">
         <%= link_to "Work In Progress", "#" %>
@@ -14,7 +14,7 @@
         <%= link_to "Finished Guitars", finished_guitars_path %>
       </li>
       <li class="nav-item">
-        <%= link_to "Media", "#" %>
+        <%= link_to "Media", videos_path %>
       </li>
       <% if current_user %>
       <li class="nav-item dropdown">
@@ -22,6 +22,8 @@
           Admin
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "New Media", new_video_path, class: "dropdown-item"%>
+          <div class="dropdown-divider"></div>
           <%= link_to "New Finished Guitar", new_finished_guitar_path, class: "dropdown-item"%>
           <div class="dropdown-divider"></div>
           <%= link_to  "Log Out", logout_path, method: :delete, class: "dropdown-item" %>

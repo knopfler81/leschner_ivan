@@ -1,6 +1,6 @@
 #guitars_gallery{
-  margin-top: -100px;
 	text-align: center;
+  margin-top: 20px;
 }
 
 .small_image {
@@ -51,10 +51,4 @@
 
 #open-admin{
   margin-top: 10px;
-}
-
-.trash {
-  visibility: hidden;
-  transform: scale(0);
-  color: $orange;
 }

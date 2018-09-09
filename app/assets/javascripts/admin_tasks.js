@@ -8,7 +8,11 @@ if(openAdmin != null){
 	var guitarGallery = document.getElementById('guitars_gallery');
 	var guitarGalleryAdmin = document.getElementById('guitars_gallery_admin');
 	var trashes = Array.from(document.getElementsByClassName('trash'));
-
+		
+		trashes.forEach(function(trash){
+			trash.style.display = "none";
+  		trash.style.transform =  "scale(0)";
+		})
 
 	function openAdminTasks(){
 
@@ -22,7 +26,7 @@ if(openAdmin != null){
 
 		trashes.forEach(function(trash){
 			setTimeout(function(){
-				trash.style.visibility = "visible";
+				trash.style.display = "block";
 				trash.style.transition = "all 500ms ease-in";
 				trash.style.transform = "scale(1)";
 			}, 500)
@@ -74,6 +78,7 @@ if(openAdmin != null){
 				trash.style.transform = "scale(0)";
 			}, 500)
 		})
+		location.reload();
 
 	};
 

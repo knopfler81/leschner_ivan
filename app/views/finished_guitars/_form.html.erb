@@ -2,9 +2,14 @@
 	<div class="col-md-10 offset-md-1 col-xs-12">	
 	<%= simple_form_for @finished_guitar, html: { multipart: true } do |f| %>
 		<%= f.input :title %>
-		<%= f.input :description , input_html: {rows: "10"}%>
+		<%= f.input :description, as: :text, input_html: {rows: "10"}%>
 			<br><br>
-				<%= f.file_field :attachments , multiple: true %>
+				<label class="btn btn-primary" id="label_uploader">
+					Add Files
+					<span id="span_uploader" >
+						<%= f.file_field :attachments, multiple: true %>
+					</span>
+				</label>
 			<br><br>
 		<%= f.button :submit, class: "btn btn-primary" %>
 	<% end %>

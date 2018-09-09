@@ -1,0 +1,17 @@
+<div class="row">
+	<div class="col-md-10 offset-md-1 col-xs-12">	
+	<%= simple_form_for @progress, html: { multipart: true } do |f| %>
+		<%= f.input :title %>
+		<%= f.input :description, as: :text, input_html: {rows: "10"}%>
+			<br><br>
+				<label class="btn btn-primary" id="prog_label_uploader"> 
+					Add Files
+					<span id="prog_span_uploader" > 
+						<%= f.file_field :pictures, multiple: true %>
+					</span>
+				</label>
+			<br><br>
+		<%= f.button :submit, class: "btn btn-primary" %>
+	<% end %>
+	</div>
+</div>

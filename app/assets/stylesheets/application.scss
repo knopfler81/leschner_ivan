@@ -22,7 +22,6 @@
 	margin: 10px;
 }
 
-
 .img_modal {
 	height: 50px;
 	border-radius: 50%;
@@ -32,3 +31,11 @@
 	height: 80px;
 }
 
+#span_uploader{
+	visibility: hidden;
+}
+
+#label_uploader {
+	width: 150px;
+	height: 45px;
+}

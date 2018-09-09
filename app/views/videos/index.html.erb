@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<h1>MEDIA</h1>
+			<hr>
+		</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="row">
+				<% @videos.each do |video| %>	
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<iframe allowfullscreen="" frameborder="0" height="200" src="<%= video.embed %>" width="300" class="youtube_frame"></iframe>
+						<br>
+						<i><%= video.created_at.strftime("%B %d, %Y") %></i> 
+						<% if current_user %>
+							<%= link_to video_path(video), method: :delete, data: {confirm: "Are you sure?"}, class: "delete_link"  do %>
+								<i class="fas fa-trash-alt trash"></i>
+							<% end %>
+							<%= link_to edit_video_path(video), class: "edit_link" do %>
+								<i class="fas fa-edit edit">edit</i>
+							<% end %>
+						<% end %>
+					</div>
+				<% end %>	
+			</div>
+		</div>
+	</div>
+</div>
