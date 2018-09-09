@@ -1,6 +1,6 @@
 #guitars_gallery{
-  margin-top: -100px;
 	text-align: center;
+  margin-top: 20px;
 }
 
 .small_image {
@@ -54,7 +54,8 @@
 }
 
 .trash {
-  visibility: hidden;
+  margin-top: 10px;
+  display: none;
   transform: scale(0);
   color: $orange;
 }
