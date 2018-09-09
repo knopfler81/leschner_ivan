@@ -22,7 +22,7 @@ if(openAdmin != null){
 
 		trashes.forEach(function(trash){
 			setTimeout(function(){
-				trash.style.visibility = "visible";
+				trash.style.display = "block";
 				trash.style.transition = "all 500ms ease-in";
 				trash.style.transform = "scale(1)";
 			}, 500)
@@ -74,6 +74,7 @@ if(openAdmin != null){
 				trash.style.transform = "scale(0)";
 			}, 500)
 		})
+		location.reload();
 
 	};
 
