@@ -8,7 +8,11 @@ if(openAdmin != null){
 	var guitarGallery = document.getElementById('guitars_gallery');
 	var guitarGalleryAdmin = document.getElementById('guitars_gallery_admin');
 	var trashes = Array.from(document.getElementsByClassName('trash'));
-
+		
+		trashes.forEach(function(trash){
+			trash.style.display = "none";
+  		trash.style.transform =  "scale(0)";
+		})
 
 	function openAdminTasks(){
 

@@ -4,7 +4,7 @@ class FinishedGuitarsController < ApplicationController
   before_action :authorize, only: [:new, :create, :destroy]
 
   def index
-    @finished_guitars = FinishedGuitar.all
+    @finished_guitars = FinishedGuitar.order(created_at: :desc).all
   end
 
   def show
