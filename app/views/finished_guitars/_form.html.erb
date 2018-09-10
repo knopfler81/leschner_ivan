@@ -4,9 +4,9 @@
 		<%= f.input :title %>
 		<%= f.input :description , input_html: {rows: "10"}%>
 			<br><br>
-				<label class="btn btn-primary">
+				<label class="btn btn-primary" id="label_uploader">
 					Add Files
-					<span style="display: none">
+					<span id="span_uploader" >
 						<%= f.file_field :attachments, multiple: true %>
 					</span>
 				</label>

@@ -13,15 +13,15 @@ class VideosController < ApplicationController
 
 	def create
 		@video = Video.new(video_params)
-		  respond_to do |format|
-		    if @video.save
-		      format.html { redirect_to videos_path, notice: 'Video was successfully created.' }
-		      format.json { render :index, status: :created, location: @videos }
-		    else
-		      format.html { render :new }
-		      format.json { render json: @video.errors, status: :unprocessable_entity }
-		    end
-		  end
+	  respond_to do |format|
+	    if @video.save
+	      format.html { redirect_to videos_path, notice: 'Video was successfully created.' }
+	      format.json { render :index, status: :created, location: @videos }
+	    else
+	      format.html { render :new }
+	      format.json { render json: @video.errors, status: :unprocessable_entity }
+	    end
+	  end
 	end
 
 
