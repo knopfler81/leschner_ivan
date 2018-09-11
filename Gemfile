@@ -37,6 +37,7 @@ group :development, :test do
 	gem 'shoulda-matchers', '~> 3.1'
 	gem 'capybara'
 	gem "capybara-webkit"
+  gem 'capybara-screenshot'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

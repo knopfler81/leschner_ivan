@@ -1,0 +1,5 @@
+gibson:
+  title: Gibson Les Paul
+  description: Une jolie description pour une jolie guitare.
+  attachments: <%= Rails.root.join("spec/assets/images/img_2.jpg") %>
+  attachments: <%= Rails.root.join("spec/assets/images/img_1.jpg") %>
