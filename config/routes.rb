@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :videos
   resources :progresses
 
-
   get    "/admin",  to: "sessions#new"
   post   "/login",  to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
