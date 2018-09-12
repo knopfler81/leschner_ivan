@@ -1,0 +1,15 @@
+<div id="admin_tasks">
+	<div class="row">
+		<div class="col-xs-6">
+			<%= link_to "Edit Text", edit_progress_path(@progress), class: "btn btn-primary" %>		
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpicmodal_2">
+			  Add pictures
+			</button>
+		</div>
+	
+	</div>
+	<hr>
+</div>
+
+
+<%= render "modal_add_pic" %>

@@ -12,7 +12,6 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-
 def login_as(user)
   visit "/admin"
   fill_in "Username", with: "admin"

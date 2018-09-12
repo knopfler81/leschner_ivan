@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "managing finished guitar" do 
 
-	fixtures :finished_guitars
+	fixtures :finished_guitars, :user
 
 	context "The admin is logged in" do 
 
@@ -26,20 +26,20 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Guitar was successfully created")
 		end
 
-
 		scenario "edit a guitar text" do 
-			guitar = finished_guitars(:gibson)
-			visit finished_guitar_path(guitar)
+			guitar = finished_guitars(:fender)
 
 			click_on "Admin Tasks"
 			click_on "Edit Text"
-			fill_in "Title", with: "Fender Stratocaster"
+
+			fill_in "Title", with: "Fender Telecaster"
+
 			click_on "Update Finished guitar"
 
 			expect(page).to have_content("Guitar was successfully updated")
 		end
 
-		scenario "add images for a guitar", :skip do 
+		scenario "add images for a guitar"  do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 
@@ -52,26 +52,18 @@ RSpec.feature "managing finished guitar" do
 			end
 
 			click_on "Update Finished guitar"
-			expect(guitar.attachments.count).to eq(3)
-
+			
+			expect(page).to have_content("Successfully added")
 		end
 
-
-		scenario "remove some images from a finished guitar", :skip do
-			guitar = finished_guitars(:gibson)
+		scenario "remove some images from a finished guitar" do
+			guitar = finished_guitars(:fender)
 			visit finished_guitar_path(guitar)
-
-			puts guitar.attachments.count.to_s + " => nombre d'images au départ"
 
 			click_on "Admin Tasks"
 			first(:css, ".remove_link").click
 
-			
-			puts guitar.attachments.count.to_s + " => nombre d'image à la fin"
-
-			#expect(guitar.attachments.count).to eq(0)
-
+			expect(page).to have_content("Picture was successfully destroyed")
 		end
-
 	end
 end
