@@ -29,6 +29,8 @@ RSpec.feature "managing finished guitar" do
 		scenario "edit a guitar text" do 
 			guitar = finished_guitars(:fender)
 
+			visit finished_guitar_path(guitar)
+
 			click_on "Admin Tasks"
 			click_on "Edit Text"
 
