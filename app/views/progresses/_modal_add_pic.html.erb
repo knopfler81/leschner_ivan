@@ -1,0 +1,24 @@
+<div class="modal fade bd-example-modal-lg" id="addpicmodal_2" tabindex="-1" role="dialog" aria-labelledby="addpicmodal_2" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<div class="modal-header">
+    		<h2>Add files and update</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal_text">
+				<%= simple_form_for @progress, url: progress_pictures_path(@progress), method: :post do |f| %>
+				  <label class="btn btn-primary" id="prog_label_uploader_2">
+            Add Files
+            <span id="prog_span_uploader_2" >
+              <%= f.file_field :pictures, multiple: true %>
+            </span>
+          </label>
+				 <%= f.button :submit, class: "btn btn-primary" %>
+				 <% end %>
+      </div>     
+    </div>
+  </div>
+</div>
+

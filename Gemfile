@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.4'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
@@ -37,7 +37,7 @@ group :development, :test do
 	gem 'shoulda-matchers', '~> 3.1'
 	gem 'capybara'
 	gem "capybara-webkit"
-  gem 'capybara-screenshot'
+  gem 'rails-controller-testing'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

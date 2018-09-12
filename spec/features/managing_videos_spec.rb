@@ -2,6 +2,8 @@ require "rails_helper"
 
 RSpec.feature "managing videos" do 
 
+	fixtures :user
+
 	context "The admin is logged in" do 
 
 		before :each do

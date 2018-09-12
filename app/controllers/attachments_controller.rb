@@ -3,14 +3,20 @@ class AttachmentsController < ApplicationController
 
   def create
     add_more_attachments(attachments_params[:attachments])
-    flash[:error] = "Failed uploading attachments" unless @finished_guitar.save
-    redirect_to @finished_guitar
+    if @finished_guitar.save
+      redirect_to @finished_guitar, notice: "Successfully added"
+    else
+      flash[:error] = "Failed uploading attachments"
+    end
   end
 
   def destroy
     remove_attachments_at_index(params[:id].to_i)
-    flash[:error] = "Failed deleting attachments" unless @finished_guitar.save
-    redirect_to @finished_guitar
+    if @finished_guitar.save 
+      redirect_to @finished_guitar, notice: "Picture was successfully destroyed"
+    else
+      flash[:error] = "Failed deleting attachments"
+    end
   end
 
   private
