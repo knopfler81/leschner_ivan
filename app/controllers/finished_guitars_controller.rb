@@ -1,5 +1,5 @@
 class FinishedGuitarsController < ApplicationController
-
+  protect_from_forgery
   before_action :find_finished_guitar, only: [:show, :destroy, :edit , :update]
   before_action :authorize, only: [:new, :create, :destroy]
 
@@ -16,16 +16,15 @@ class FinishedGuitarsController < ApplicationController
 
   def create
    @finished_guitar = FinishedGuitar.new(finished_guitar_params)
-
-     respond_to do |format|
-       if @finished_guitar.save
-         format.html { redirect_to @finished_guitar, notice: 'Guitar was successfully created.' }
-         format.json { render :show, status: :created, location: @finished_guitar }
-       else
-         format.html { render :new }
-         format.json { render json: @finished_guitar.errors, status: :unprocessable_entity }
-       end
+   respond_to do |format|
+     if @finished_guitar.save
+       format.html { redirect_to @finished_guitar, notice: 'Guitar was successfully created.' }
+       format.json { render :show, status: :created, location: @finished_guitar }
+     else
+       format.html { render :new }
+       format.json { render json: @finished_guitar.errors, status: :unprocessable_entity }
      end
+   end
   end
 
   def edit
@@ -35,7 +34,7 @@ class FinishedGuitarsController < ApplicationController
     if @finished_guitar.update(finished_guitar_params)
       redirect_to @finished_guitar, notice: "Guitar was successfully updated"
     else
-      render :edit
+      render :edit, alert: "Something went wrong"
     end
   end
 
@@ -53,6 +52,4 @@ class FinishedGuitarsController < ApplicationController
     def find_finished_guitar
       @finished_guitar = FinishedGuitar.find(params[:id])
     end
-
-
 end

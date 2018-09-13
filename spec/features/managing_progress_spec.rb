@@ -27,14 +27,14 @@ RSpec.feature "Managing progress" do
 			expect(page).to have_content("Progress was successfully created")
 		end
 
-		scenario "edit a progress text" do 
+		scenario "edit a progress text", :js do 
 			progress = progresses(:fender)
 			visit progress_path(progress)
 
-			click_on "Admin Tasks"
-			click_on "Edit Text"
+
+			click_on "Edit"
 			fill_in "Title", with: "Fender Telecaster"
-			click_on "Update Progress"
+			click_on "Update Me"
 
 			expect(page).to have_content("Progress was successfully updated")
 		end
@@ -43,7 +43,7 @@ RSpec.feature "Managing progress" do
 			guitar = progresses(:gibson)
 			visit progress_path(guitar)
 
-	    click_on "Admin Tasks"
+			click_on "Edit"
 			click_on "Add pictures"
 
 			within "#prog_label_uploader_2" do 
@@ -52,21 +52,20 @@ RSpec.feature "Managing progress" do
 				end
 			end
 
-			click_on "Update Progress"
+			click_on "Update"
 			
 			expect(page).to have_content("Successfully added")
 
 		end
 
 		scenario "remove some images from a finished guitar" do
-			guitar = progresses(:fender)
+			guitar = progresses(:gibson)
 			visit progress_path(guitar)
 
-			click_on "Admin Tasks"
+			click_on "Edit"
 			first(:css, ".remove_link").click
 
 			expect(page).to have_content("Picture was successfully destroyed")
-
 		end
 	end
 end

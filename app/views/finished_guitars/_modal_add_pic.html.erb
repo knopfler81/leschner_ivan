@@ -2,21 +2,23 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     	<div class="modal-header">
-    		<h2>Add files and update</h2>
+    		<h2>Add pictures</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal_text">
-				<%= simple_form_for @finished_guitar, url: finished_guitar_attachments_path(@finished_guitar), method: :post do |f| %>
-				  <label class="btn btn-primary" id="label_uploader_2">
-            Add Files
-            <span id="span_uploader_2" >
-              <%= f.file_field :attachments, multiple: true %>
-            </span>
-          </label>
-				 <%= f.button :submit, class: "btn btn-primary" %>
-				 <% end %>
+				<div class="container">
+          <%= simple_form_for @finished_guitar, url: finished_guitar_attachments_path(@finished_guitar), method: :post do |f| %>
+            <label class="btn btn-primary" id="label_uploader_2">
+              Add Files
+              <span id="span_uploader_2" >
+                <%= f.file_field :attachments, multiple: true %>
+              </span>
+            </label>
+           <%= f.button :submit, "Update", class: "btn btn-primary" %>
+         <% end %>    
+        </div>
       </div>     
     </div>
   </div>
