@@ -1,15 +1,14 @@
 body {
   color              : #333;
   background-color: #E2E2E2;
-  font-family        : 'Crimson Text', serif; 
+  font-family        : verdana, arial, helvetica, sans-serif;
   font-size          : 13px;
   line-height        : 18px;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family        : 'Crimson Text', serif !important; 
+h1, h2, h3 {
+  font-family: 'leschnerfont' !important
 }
-
 
 .text-gold{
   color: #75521a;
@@ -23,17 +22,4 @@ h1, h2, h3, h4, h5 {
 
 a:link {
   text-decoration: none;
-}
-
-#about {
-  padding: 10px;
-}
-
-.login_form {
-  margin-top: 100px;
-  padding: 100px 50px 100px 50px;
-  background-color: #fff;
-  border: 1px solid #BBB;
-  border-radius: 3px;
-  box-shadow: 7px 11px 30px 0px rgba(0,0,0,0.75);
 }
