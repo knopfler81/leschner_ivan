@@ -1,17 +1,21 @@
 .bg-image {
-	background-image    : url("https://s3-eu-west-1.amazonaws.com/leschnerguitars/head.jpg");
-  margin-top          : -50px;
-  -webkit-filter      : grayscale(20%);
-  background-size     : cover;
-  background-repeat   : no-repeat;
-  background-position : center;
-  height              : 55vh;
+  background-image        : url("https://s3-eu-west-1.amazonaws.com/leschnerguitars/head.jpg");
+  background-repeat       : no-repeat;
+  background-attachment   : fixed;
+  -o-background-size      : cover;
+  -moz-background-size    : cover;
+  -webkit-background-size : cover;
+  margin-top              : -50px;
+  -webkit-filter          : grayscale(20%);
+  background-size         : cover;
+  background-position     : center;
+  height                  : 55vh;
 }
 
 
 // thumbnail avec effets
 .make-it-slow {
-  a:hover {;
+  a:hover {
     text-decoration   : none;
   }
   box-shadow          : 0 1px 2px rgba(0,0,0,0.15);
