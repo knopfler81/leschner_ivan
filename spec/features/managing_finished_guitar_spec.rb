@@ -13,7 +13,7 @@ RSpec.feature "managing finished guitar" do
 		scenario "create a new guitar" do 
 			visit new_finished_guitar_path
 			fill_in "Title", with: "Gibson Les Paul"
-			fill_in "Description", with: "Super guitare...."
+			fill_in "Description", with: "Super guitar...."
 
 			within "#label_uploader" do 
 				within "#span_uploader" do 
@@ -26,24 +26,25 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Guitar was successfully created")
 		end
 
-		scenario "edit a guitar text" do 
+		scenario "edit a finished guitar text", :js do 
+			#la fave icon doit etre dans le dossier public
 			guitar = finished_guitars(:fender)
-
 			visit finished_guitar_path(guitar)
 
-			click_on "Admin Tasks"
-			click_on "Edit Text"
-
+			click_on "Edit"
+			
 			fill_in "Title", with: "Fender Telecaster"
 
-			click_on "Update Finished guitar"
+			click_on "Update Me"
 
 			expect(page).to have_content("Guitar was successfully updated")
 		end
 
-		scenario "add images for a guitar"  do
+		scenario "add images for a guitar" do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
+
+			click_on "Edit"
 
 			click_on "Add pictures"
 
@@ -53,16 +54,18 @@ RSpec.feature "managing finished guitar" do
 				end
 			end
 
-			click_on "Update Finished guitar"
+			click_on "Update"
 			
 			expect(page).to have_content("Successfully added")
 		end
 
+	
+
 		scenario "remove some images from a finished guitar" do
-			guitar = finished_guitars(:fender)
+			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 
-			click_on "Admin Tasks"
+			click_on "Edit"
 			first(:css, ".remove_link").click
 
 			expect(page).to have_content("Picture was successfully destroyed")

@@ -1,10 +1,12 @@
 class AttachmentsController < ApplicationController
+  protect_from_forgery
+
   before_action :set_finished_guitar
 
   def create
     add_more_attachments(attachments_params[:attachments])
     if @finished_guitar.save
-      redirect_to @finished_guitar, notice: "Successfully added"
+      redirect_to edit_finished_guitar_path(@finished_guitar), notice: "Successfully added"
     else
       flash[:error] = "Failed uploading attachments"
     end
@@ -13,7 +15,7 @@ class AttachmentsController < ApplicationController
   def destroy
     remove_attachments_at_index(params[:id].to_i)
     if @finished_guitar.save 
-      redirect_to @finished_guitar, notice: "Picture was successfully destroyed"
+      redirect_to edit_finished_guitar_path(@finished_guitar), notice: "Picture was successfully destroyed"
     else
       flash[:error] = "Failed deleting attachments"
     end
@@ -32,13 +34,13 @@ class AttachmentsController < ApplicationController
   end
 
   def remove_attachments_at_index(index)
-    remain_attachments = @finished_guitar.attachments # copy the array
-    deleted_attachments = remain_attachments.delete_at(index) # delete the target attachments
-    deleted_attachments.try(:remove!) # delete attachments from S3
-    @finished_guitar.attachments = remain_attachments # re-assign back
+    remain_attachments = @finished_guitar.attachments
+    deleted_attachments = remain_attachments.delete_at(index)
+    deleted_attachments.try(:remove!)
+    @finished_guitar.attachments = remain_attachments
   end
 
   def attachments_params
-    params.require(:finished_guitar).permit({attachments: []}) # allow nested params as array
+    params.require(:finished_guitar).permit({attachments: []})
   end
 end

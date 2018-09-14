@@ -1,7 +1,7 @@
 fender:
   title: Fender Stratocaster
   description: Une jolie description pour une jolie guitare.
-  attachments: [<%= Rails.root.join("spec/assets/images/img_1.jpg") %>]
+  attachments: [] #pas d'image dans cette fixture, selenimum cherche dans le dossier public que je vide à chaque push
 gibson:
   title: Gibson Les Paul
   description: Une jolie description pour une jolie guitare.

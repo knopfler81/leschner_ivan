@@ -3,6 +3,20 @@
   margin-top: 20px;
 }
 
+
+.tiny_image {
+  padding: 2px;
+  border: 1px solid #DDD;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display:inline-block;
+  border:0;
+  position: relative;
+}
+
 .small_image {
 	padding: 10px;
 	border: 1px solid #DDD;

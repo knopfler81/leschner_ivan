@@ -2,14 +2,11 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 col-xs-12 ">
 			<h1><%= @progress.title %></h1> 
-			<p><%= @progress.description %></p>
+			<p><%= simple_format(@progress.description) %></p>
 		</div>
 		<div class="col-md-10 col-md-offset-1 col-xs-12">
 			<% if current_user %>
-				<button class="btn btn-primary" id="open-admin">Admin Tasks</button>
-				<button class="btn btn-danger" id="close-admin">Close Admin Tasks</button>
-				<hr>
-				<%= render "admin_tasks" %>
+				<%= link_to "Edit", edit_progress_path(@progress), class: "btn btn-primary" %>		
 			<% end %>
 		</div>
 	</div>
