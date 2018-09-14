@@ -1,10 +1,11 @@
 class ProgressesController < ApplicationController
-	before_action :find_progress , only: [:show, :edit, :update, :destroy]
+	protect_from_forgery
+	before_action :find_progress, only: [:show, :edit, :update, :destroy]
+	before_action :authorize, only: [:new, :create, :destroy]
 
 	def index
-		@progresses = Progress.all 
+		@progresses = Progress.order(created_at: :desc).all
 	end
-
 
 	def show
 	end
@@ -16,7 +17,7 @@ class ProgressesController < ApplicationController
 	def create
 		@progress = Progress.new(progress_params)
 		if @progress.save 
-			redirect_to @progress, notice: "Progress was successfully created"
+			redirect_to @progress, notice: "Work In Progress was successfully created"
 		else
 			render :new
 		end
@@ -27,10 +28,15 @@ class ProgressesController < ApplicationController
 
 	def update
 		if @progress.update(progress_params)
-      redirect_to @progress, notice: "Progress was successfully updated"
+      redirect_to @progress, notice: "Work In Progress was successfully updated"
     else
       render :edit
     end
+	end
+
+	def destroy
+		@progress.destroy!
+		redirect_to progresses_path, notice: "Work In Progress was successfully destroyed"
 	end
 
 	private

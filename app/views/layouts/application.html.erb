@@ -11,10 +11,8 @@
   <body>
     <%= render "layouts/navbar" %>
     <%= render "layouts/shared/about_modal" %>
-
     <%= render "layouts/shared/flashes" %>
 
-  
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>   
