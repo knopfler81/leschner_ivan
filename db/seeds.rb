@@ -47,7 +47,7 @@ counter_1 = 0
 	description: Faker::Lorem.paragraph(3),	
 	attachments: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg"),
 									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
-									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg)"
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"),
 								].shuffle)
 puts 'Created Finished guitars ' + counter_1.to_s
 
