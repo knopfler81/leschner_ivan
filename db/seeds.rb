@@ -9,9 +9,9 @@ Video.destroy_all
 
 puts 'Created user'
 
-counter_1 = 0
+
 3.times do 
-	counter_1 += 1
+	
 FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
@@ -19,13 +19,13 @@ FinishedGuitar.create!(
 									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
 									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg")
 								].shuffle)
-puts 'Created Finished guitars ' + counter_1.to_s
+puts 'Created Finished guitars '
 
 end
 
 
 6.times do 
-	counter_1 += 1
+	
 	FinishedGuitar.create!(
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
@@ -35,13 +35,13 @@ end
 		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg")
 	].shuffle)
 
-	puts 'Created Finished guitar '  + counter_1.to_s
+	puts 'Created Finished guitar '
 
 end
 
 
 6.times do 
-	counter_1 += 1
+	
 	FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
@@ -49,13 +49,13 @@ end
 									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
 									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg")
 								].shuffle)
-puts 'Created Finished guitars ' + counter_1.to_s
+puts 'Created Finished guitars '
 
 end
 
 
 6.times do 
-	counter_1 += 1
+	
 	FinishedGuitar.create!(
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
@@ -65,13 +65,13 @@ end
 		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg")
 	].shuffle)
 
-	puts 'Created Finished guitar '  + counter_1.to_s
+	puts 'Created Finished guitar ' 
 
 end
 
-counter_2 = 0
+
 6.times do 
-	counter_2 += 1
+	
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
@@ -82,13 +82,13 @@ Progress.create!(
 							].shuffle)
 
 
-puts 'Created Progresses ' + counter_2.to_s
+puts 'Created Progresses '
 
 end
 
 
 6.times do 
-	counter_2 += 1
+	
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
@@ -99,13 +99,13 @@ Progress.create!(
 							].shuffle)
 
 
-puts 'Created Progresses ' + counter_2.to_s
+puts 'Created Progresses ' 
 
 end
 
 
 6.times do 
-	counter_2 += 1
+	
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
@@ -116,21 +116,21 @@ Progress.create!(
 							].shuffle)
 
 
-puts 'Created Progresses ' + counter_2.to_s
+puts 'Created Progresses ' 
 
 end
 
 
 
-counter_3 = 0
+
 20.times do 
-	counter_3 += 1
+	
 Video.create!( 
 	url: ["https://www.youtube.com/watch?v=NWdOz9IUGS0","https://www.youtube.com/watch?v=X8zJzBjmrng","https://www.youtube.com/watch?v=Ay-VsCI_4Oc", "https://www.youtube.com/watch?v=R9JOOoqj5P4"].sample ,
 	description: Faker::Lorem.paragraph(3)	
 	)
 
 
-puts 'Created Videos ' + counter_3.to_s
+puts 'Created Videos '
 
 end
