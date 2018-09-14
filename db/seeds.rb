@@ -15,9 +15,9 @@ counter_1 = 0
 FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
-	attachments: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')), 
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_2.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_3.jpg'))].shuffle)
+	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg",
 puts 'Created Finished guitars ' + counter_1.to_s
 
 end
@@ -29,9 +29,9 @@ end
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		attachments: [
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_4.jpg')),
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg",
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg",
 	])
 
 	puts 'Created Finished guitar '  + counter_1.to_s
@@ -44,9 +44,9 @@ counter_1 = 0
 	FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
-	attachments: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_7.jpg'))].shuffle)
+	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg",
 puts 'Created Finished guitars ' + counter_1.to_s
 
 end
@@ -58,9 +58,9 @@ end
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		attachments: [
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_8.jpg')),
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_9.jpg')), 
-		File.open(File.join(Rails.root,'app/assets/images/seeds/image_10.jpg')),
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg",
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
+		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
 	])
 
 	puts 'Created Finished guitar '  + counter_1.to_s
@@ -73,10 +73,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')), 
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_2.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_3.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_4.jpg'))
+	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg",
 							].shuffle)
 
 
@@ -90,10 +90,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_7.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_8.jpg'))
+	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg",
 							].shuffle)
 
 
@@ -107,10 +107,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_10.jpg')), 
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_9.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')),
-									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg'))
+	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
 							].shuffle)
 
 
