@@ -15,9 +15,9 @@ counter_1 = 0
 FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
-	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg"
+	attachments: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg)"
 								].shuffle)
 puts 'Created Finished guitars ' + counter_1.to_s
 
@@ -30,9 +30,9 @@ end
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		attachments: [
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg",
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg",
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg"),
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg"),
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg"),
 	].shuffle)
 
 	puts 'Created Finished guitar '  + counter_1.to_s
@@ -45,9 +45,9 @@ counter_1 = 0
 	FinishedGuitar.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(3),	
-	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"
+	attachments: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg)"
 								].shuffle)
 puts 'Created Finished guitars ' + counter_1.to_s
 
@@ -60,9 +60,9 @@ end
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		attachments: [
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg",
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
-		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg"),
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
+		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg"),
 	].shuffle)
 
 	puts 'Created Finished guitar '  + counter_1.to_s
@@ -75,10 +75,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg",
+	pictures: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg"),
 							].shuffle)
 
 
@@ -92,10 +92,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg",
+	pictures: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
 							].shuffle)
 
 
@@ -109,10 +109,10 @@ counter_2 = 0
 Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	pictures: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
+	pictures: [  open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
+									open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
 							].shuffle)
 
 
@@ -126,7 +126,7 @@ counter_3 = 0
 20.times do 
 	counter_3 += 1
 Video.create!( 
-	url: ["https://www.youtube.com/watch?v=NWdOz9IUGS0","https://www.youtube.com/watch?v=X8zJzBjmrng","https://www.youtube.com/watch?v=Ay-VsCI_4Oc", "https://www.youtube.com/watch?v=R9JOOoqj5P4"].sample,
+	url: [open("https://www.youtube.com/watch?v=NWdOz9IUGS0","https://www.youtube.com/watch?v=X8zJzBjmrng","https://www.youtube.com/watch?v=Ay-VsCI_4Oc", "https://www.youtube.com/watch?v=R9JOOoqj5P4"].sample),
 	description: Faker::Lorem.paragraph(3)	
 	)
 

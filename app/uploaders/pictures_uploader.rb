@@ -3,11 +3,12 @@ class PicturesUploader < CarrierWave::Uploader::Base
 
   storage :file
 
-  # if Rails.env.production?
-  #   storage :fog
-  # else
-  #   storage :file
-  # end
+  if Rails.env.production?
+    storage :fog
+  else
+    storage :file
+  end
+  
   version :thumb do
      process resize_to_fill: [280, 280]
    end
