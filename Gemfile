@@ -19,7 +19,7 @@ gem 'jquery-rails'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'fog-aws'
-gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 
 
