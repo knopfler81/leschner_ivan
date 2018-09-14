@@ -17,7 +17,8 @@ FinishedGuitar.create!(
 	description: Faker::Lorem.paragraph(3),	
 	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
 									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg"
+								].shuffle)
 puts 'Created Finished guitars ' + counter_1.to_s
 
 end
@@ -32,7 +33,7 @@ end
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg",
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg",
-	])
+	].shuffle)
 
 	puts 'Created Finished guitar '  + counter_1.to_s
 
@@ -46,7 +47,8 @@ counter_1 = 0
 	description: Faker::Lorem.paragraph(3),	
 	attachments: [  "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg",
 									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg",
-									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg",
+									"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"
+								].shuffle)
 puts 'Created Finished guitars ' + counter_1.to_s
 
 end
@@ -61,7 +63,7 @@ end
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg",
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg",
 		"https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg",
-	])
+	].shuffle)
 
 	puts 'Created Finished guitar '  + counter_1.to_s
 
