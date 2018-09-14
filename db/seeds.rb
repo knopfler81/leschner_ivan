@@ -1,168 +1,134 @@
-
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# #
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
-
-
-
 # User.destroy_all
 
 # @user = User.create!(username: 'admin',  password: 'password', password_confirmation: 'password')
 
 
-# FinishedGuitar.destroy_all
-
-# puts 'Created user'
-
-# counter = 0
-
-# 3.times do 
-# 	counter += 1
-# 	FinishedGuitar.create!( 
-# 		user_id: @user.id,
-# 		title:  Faker::Music.instrument,
-# 		description: Faker::Lorem.paragraph(2),	
-# 		:attachments{
-# 			0 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_1.jpg')),
-# 			},
-# 			1 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_2.jpg')),
-# 			},
-# 			2 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_3.jpg')),
-# 			},
-# 			3 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_4.jpg')),
-# 			}
-# 		}
-# 	)
-# 	puts 'Created Finished guitar ' + counter.to_s
-# end
-
-# 3.times do 
-# 	counter += 1
-# 	FinishedGuitar.create!( 
-# 		user_id: @user.id,
-# 		title:  Faker::Music.instrument,
-# 		description: Faker::Lorem.paragraph(2),	
-# 		:attachments_attributes => {
-# 			0 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_2.jpg')),
-# 			},
-# 			1 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_1.jpg')),
-# 			},
-# 			2 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_3.jpg')),
-# 			},
-# 			3 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_4.jpg')),
-# 			}
-# 		}
-# 	)
-
-# 	puts 'Created Finished guitar ' + counter.to_s
-# end
-
-
-# 3.times do 
-# 	counter += 1
-# 	FinishedGuitar.create!( 
-# 		user_id: @user.id,
-# 		title:  Faker::Music.instrument,
-# 		description: Faker::Lorem.paragraph(2),	
-# 		:attachments_attributes => {
-# 			0 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_3.jpg')),
-# 			},
-# 			1 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_1.jpg')),
-# 			},
-# 			2 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_2.jpg')),
-# 			},
-# 			3 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_4.jpg')),
-# 			}
-# 		}
-# 	)
-
-# 	puts 'Created Finished guitar ' + counter.to_s
-# end
-
-# 3.times do 
-# 	counter += 1
-# 	FinishedGuitar.create!( 
-# 		user_id: @user.id,
-# 		title:  Faker::Music.instrument,
-# 		description: Faker::Lorem.paragraph(2),	
-# 		:attachments_attributes => {
-# 			0 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_4.jpg')),
-# 			},
-# 			1 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_3.jpg')),
-# 			},
-# 			2 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_2.jpg')),
-# 			},
-# 			3 => {
-# 				image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_1.jpg')),
-# 			}
-# 		}
-# 	)
-
-# 	puts 'Created Finished guitar ' + counter.to_s
-
-# end
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
-
-User.destroy_all
-
-@user = User.create!(username: 'admin',  password: 'password', password_confirmation: 'password')
-
-
 FinishedGuitar.destroy_all
+Progress.destroy_all
+Video.destroy_all
 
 puts 'Created user'
 
-counter = 0
-10.times do 
-	counter += 1
+counter_1 = 0
+3.times do 
+	counter_1 += 1
 FinishedGuitar.create!( 
-	user_id: @user.id,
+	title:  Faker::Music.instrument,
+	description: Faker::Lorem.paragraph(3),	
+	attachments: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')), 
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_2.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_3.jpg'))].shuffle)
+puts 'Created Finished guitars ' + counter_1.to_s
+
+end
+
+
+6.times do 
+	counter_1 += 1
+	FinishedGuitar.create!(
+		title:  Faker::Music.instrument,
+		description: Faker::Lorem.paragraph(3),	
+		attachments: [
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_4.jpg')),
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
+	])
+
+	puts 'Created Finished guitar '  + counter_1.to_s
+
+end
+
+counter_1 = 0
+6.times do 
+	counter_1 += 1
+	FinishedGuitar.create!( 
+	title:  Faker::Music.instrument,
+	description: Faker::Lorem.paragraph(3),	
+	attachments: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_7.jpg'))].shuffle)
+puts 'Created Finished guitars ' + counter_1.to_s
+
+end
+
+
+6.times do 
+	counter_1 += 1
+	FinishedGuitar.create!(
+		title:  Faker::Music.instrument,
+		description: Faker::Lorem.paragraph(3),	
+		attachments: [
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_8.jpg')),
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_9.jpg')), 
+		File.open(File.join(Rails.root,'app/assets/images/seeds/image_10.jpg')),
+	])
+
+	puts 'Created Finished guitar '  + counter_1.to_s
+
+end
+
+counter_2 = 0
+6.times do 
+	counter_2 += 1
+Progress.create!( 
 	title:  Faker::Music.instrument,
 	description: Faker::Lorem.paragraph(2),	
-	:attachments_attributes => {
-		0 => {
-			image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_1.jpg')),
-		},
-		1 => {
-			image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_2.jpg')),
-		},
-		2 => {
-			image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_3.jpg')),
-		},
-		3 => {
-			image:  File.new(Rails.root.join('app/assets/images/seeds/', 'image_4.jpg')),
-		}
-	}
-		)
+	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')), 
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_2.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_3.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_4.jpg'))
+							].shuffle)
 
 
-puts 'Created Finished guitar ' + counter.to_s
+puts 'Created Progresses ' + counter_2.to_s
+
+end
+
+counter_2 = 0
+6.times do 
+	counter_2 += 1
+Progress.create!( 
+	title:  Faker::Music.instrument,
+	description: Faker::Lorem.paragraph(2),	
+	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_5.jpg')), 
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_7.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_8.jpg'))
+							].shuffle)
+
+
+puts 'Created Progresses ' + counter_2.to_s
+
+end
+
+counter_2 = 0
+6.times do 
+	counter_2 += 1
+Progress.create!( 
+	title:  Faker::Music.instrument,
+	description: Faker::Lorem.paragraph(2),	
+	pictures: [  File.open(File.join(Rails.root,'app/assets/images/seeds/image_10.jpg')), 
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_9.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_1.jpg')),
+									File.open(File.join(Rails.root,'app/assets/images/seeds/image_6.jpg'))
+							].shuffle)
+
+
+puts 'Created Progresses ' + counter_2.to_s
+
+end
+
+
+
+counter_3 = 0
+20.times do 
+	counter_3 += 1
+Video.create!( 
+	url: ["https://www.youtube.com/watch?v=NWdOz9IUGS0","https://www.youtube.com/watch?v=X8zJzBjmrng","https://www.youtube.com/watch?v=Ay-VsCI_4Oc", "https://www.youtube.com/watch?v=R9JOOoqj5P4"].sample,
+	description: Faker::Lorem.paragraph(3)	
+	)
+
+
+puts 'Created Videos ' + counter_3.to_s
 
 end

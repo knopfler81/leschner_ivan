@@ -2,12 +2,11 @@
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
       <div class="login_form">
-        <h1>Log In</h1>
-          <%= simple_form_for :session, url: login_path, wrapper: :inline_form, html: { class: "form-inline"} do |f| %>
-            <%= f.input :username, autofocus: true, placeholder: "Username" %>
-            <%= f.input :password, placeholder: "Password" %>
-            <%= f.button :submit, "Log In", class: "btn btn-primary" %>
-         <% end %>
+        <%= simple_form_for :session, url: login_path, wrapper: :inline_form, html: { class: "form-inline"} do |f| %>
+          <%= f.input :username, autofocus: true, placeholder: "Username" %>
+          <%= f.input :password, placeholder: "Password" %>
+          <%= f.button :submit, "Log In", class: "btn btn-primary" %>
+        <% end %>
       </div>    
     </div>
   </div>
