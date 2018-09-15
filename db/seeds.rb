@@ -1,3 +1,4 @@
+require "open-uri"
 # User.destroy_all
 
 # @user = User.create!(username: 'admin',  password: 'password', password_confirmation: 'password')
