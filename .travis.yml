@@ -4,11 +4,10 @@ rvm:
   - 2.4.4
 
 addons:
+  postgresql: "9.4"
   apt:
     - google-chrome-stable
     - chromium-chromedriver
-    
-  postgresql: "9.4"
 
 before_install:
   - "echo 'gem: --no-document' > ~/.gemrc"
