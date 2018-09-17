@@ -39,7 +39,7 @@ class FinishedGuitarsController < ApplicationController
   end
 
   def destroy
-    @finished_guitar.destroy
+    @finished_guitar.destroy!
     redirect_to finished_guitars_path, notice: "Guitar was successfully destroyed"
   end
 

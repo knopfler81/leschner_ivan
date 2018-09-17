@@ -24,26 +24,26 @@ RSpec.feature "Managing progress" do
 
 			click_on "Create Progress"
 
-			expect(page).to have_content("Progress was successfully created")
+			expect(page).to have_content("Work In Progress was successfully created")
 		end
 
 		scenario "edit a progress text", :js do 
 			progress = progresses(:fender)
 			visit progress_path(progress)
 
+			find(".fa-edit").click
 
-			click_on "Edit"
 			fill_in "Title", with: "Fender Telecaster"
 			click_on "Update Me"
 
-			expect(page).to have_content("Progress was successfully updated")
+			expect(page).to have_content("Work In Progress was successfully updated")
 		end
 
 		scenario "add images for a guitar"  do
 			guitar = progresses(:gibson)
 			visit progress_path(guitar)
 
-			click_on "Edit"
+			find(".edit_link").click
 			click_on "Add pictures"
 
 			within "#prog_label_uploader_2" do 
@@ -58,14 +58,24 @@ RSpec.feature "Managing progress" do
 
 		end
 
-		scenario "remove some images from a finished guitar" do
+		scenario "remove some images from a progress" do
 			guitar = progresses(:gibson)
 			visit progress_path(guitar)
 
-			click_on "Edit"
-			first(:css, ".remove_link").click
+			find(".edit_link").click
+			first(:css, ".delete_img_link").click
 
 			expect(page).to have_content("Picture was successfully destroyed")
 		end
+
+		scenario "remove progress article and its pictures" do
+			guitar = progresses(:leschner)
+			visit progress_path(guitar)
+
+			find(".delete_link").click
+
+			expect(page).to have_content("Work In Progress was successfully destroyed")
+		end
+
 	end
 end

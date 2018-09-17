@@ -31,8 +31,8 @@ RSpec.feature "managing finished guitar" do
 			guitar = finished_guitars(:fender)
 			visit finished_guitar_path(guitar)
 
-			click_on "Edit"
-			
+			find(".edit_link").click
+
 			fill_in "Title", with: "Fender Telecaster"
 
 			click_on "Update Me"
@@ -44,7 +44,7 @@ RSpec.feature "managing finished guitar" do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 
-			click_on "Edit"
+			find(".edit_link").click
 
 			click_on "Add pictures"
 
@@ -59,16 +59,24 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Successfully added")
 		end
 
-	
-
 		scenario "remove some images from a finished guitar" do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 
-			click_on "Edit"
-			first(:css, ".remove_link").click
+			find(".edit_link").click
+
+			first(:css, ".delete_img_link").click
 
 			expect(page).to have_content("Picture was successfully destroyed")
+		end
+
+		scenario "remove an article and its attachments" do 
+			guitar = finished_guitars(:gibson)
+			visit finished_guitar_path(guitar)
+
+			find(".delete_link").click
+
+			expect(page).to have_content("Guitar was successfully destroyed")
 		end
 	end
 end

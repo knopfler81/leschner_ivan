@@ -37,18 +37,16 @@ class VideosController < ApplicationController
 	end
 
 	def destroy
-		if @video.destroy
-			redirect_to videos_path, notice: "Video was successfully destroyed"
-		end
+		@video.destroy!
+		redirect_to videos_path, notice: "Video was successfully destroyed"
 	end
 
 
 	private
 
-
-	def find_video
-		@video = Video.find(params[:id])
-	end
+		def find_video
+			@video = Video.find(params[:id])
+		end
 
 		def video_params
 			params.require(:video).permit(:url, :description)

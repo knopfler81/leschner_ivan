@@ -6,3 +6,7 @@ gibson:
   title: Gibson Les Paul
   description: Une jolie description pour une jolie guitare.
   pictures: [<%= Rails.root.join("spec/assets/images/img_2.jpg") %>, <%= Rails.root.join("spec/assets/images/img_1.jpg") %>]
+leschner:
+  title: Leschner
+  description: Une jolie description pour une jolie guitare.
+  pictures: [<%= Rails.root.join("spec/assets/images/img_2.jpg") %>, <%= Rails.root.join("spec/assets/images/img_1.jpg") %>]
