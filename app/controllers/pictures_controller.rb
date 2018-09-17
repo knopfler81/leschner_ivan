@@ -13,7 +13,7 @@ class PicturesController < ApplicationController
   def destroy
     remove_pictures_at_index(params[:id].to_i)
     if @progress.save
-      redirect_to @progress, notice: "Picture was successfully destroyed"
+      redirect_to edit_progress_path(@progress), notice: "Picture was successfully destroyed"
     else
       flash[:error] = "Failed deleting pictures"
     end
@@ -33,6 +33,9 @@ class PicturesController < ApplicationController
 
   def remove_pictures_at_index(index)
     remain_pictures = @progress.pictures
+    if index == 0 && @progress.pictures.size == 1
+      @progress.remove_pictures!
+    end
     deleted_pictures = remain_pictures.delete_at(index)
     deleted_pictures.try(:remove!)
     @progress.pictures = remain_pictures
