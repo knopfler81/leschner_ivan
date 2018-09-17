@@ -38,7 +38,7 @@ group :development, :test do
   gem 'database_cleaner'
 	gem 'shoulda-matchers', '~> 3.1'
 	gem 'capybara'
-	gem "capybara-webkit"
+  gem 'capybara-webkit', github: 'thoughtbot/capybara-webkit', branch: 'master'
   gem 'rails-controller-testing'
   gem 'pry-byebug'
   gem 'pry-rails'

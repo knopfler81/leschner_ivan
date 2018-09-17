@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/thoughtbot/capybara-webkit.git
+  revision: 41c43062677c1628e09f9dc00dc24528ba161ed7
+  branch: master
+  specs:
+    capybara-webkit (1.15.0)
+      capybara (>= 2.3, < 4.0)
+      json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,9 +75,6 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
-    capybara-webkit (1.15.0)
-      capybara (>= 2.3, < 4.0)
-      json
     carrierwave (1.2.3)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -452,7 +458,7 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass (~> 3.3.7)
   capybara
-  capybara-webkit
+  capybara-webkit!
   carrierwave (~> 1.2, >= 1.2.3)
   chromedriver-helper
   database_cleaner
