@@ -79,4 +79,15 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Guitar was successfully destroyed")
 		end
 	end
+
+	context "admin is not logged in" do 
+
+		scenario "should not see the edit button" do 
+			guitar = finished_guitars(:gibson)
+			visit finished_guitar_path(guitar)
+
+			expect(page).not_to have_css('.edit_link')
+		end
+
+	end
 end
