@@ -35,6 +35,9 @@ class AttachmentsController < ApplicationController
 
   def remove_attachments_at_index(index)
     remain_attachments = @finished_guitar.attachments
+    if index == 0 && @finished_guitar.attachments.size == 1
+      @finished_guitar.remove_attachments!
+    end
     deleted_attachments = remain_attachments.delete_at(index)
     deleted_attachments.try(:remove!)
     @finished_guitar.attachments = remain_attachments
