@@ -1,68 +1,59 @@
 #guitars_gallery{
-	text-align: center;
-  margin-top: 20px;
+  text-align            : center;
+  margin-top          : 20px;
 }
 
-
 .tiny_image {
-  padding: 2px;
-  border: 1px solid #DDD;
-  object-fit: cover;
-  width: 80px;
-  height: 80px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display:inline-block;
-  border:0;
-  position: relative;
+  padding             : 2px;
+  border              : 1px solid #DDD;
+  object-fit          : cover;
+  width               : 80px;
+  height              : 80px;
+  background-position : center center;
+  background-repeat   : no-repeat;
+  display             : inline-block;
+  border              : 0;
+  position            : relative;
 }
 
 .small_image {
-	padding: 10px;
-	border: 1px solid #DDD;
-	object-fit: cover;
-	width: 180px;
-  height: 180px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  display:inline-block;
-  border:0;
-  position: relative;
-  -webkit-transition: all 200ms ease-in;
-  -webkit-transform: scale(1); 
-  -ms-transition: all 200ms ease-in;
-  -ms-transform: scale(1); 
-  -moz-transition: all 200ms ease-in;
-  -moz-transform: scale(1);
-  transition: all 200ms ease-in;
-  transform: scale(1);   
+  margin              : 5px;
+  border              : 1px solid #DDD;
+  object-fit          : cover;
+  width               : 180px;
+  height              : 180px;
+  background-position : center center;
+  background-repeat   : no-repeat;
+  display             : inline-block;
+  border              : 0;
+  position            : relative;
+  -webkit-filter      : grayscale(30%); /* Safari 6.0 - 9.0 */
+  filter              : grayscale(30%);
+  -webkit-transition  : all 200ms ease-in;
+  -webkit-transform   : scale(1);
+  -ms-transition      : all 200ms ease-in;
+  -ms-transform       : scale(1);
+  -moz-transition     : all 200ms ease-in;
+  -moz-transform      : scale(1);
+  transition          : all 200ms ease-in;
+  transform           : scale(1);
 }
 
 .border_image{
-  border: 6px  solid #fff;
+  border              : 6px  solid #fff;
 }
 
 .small_image:hover {
-    box-shadow: 0px 0px 150px #000000;
-    z-index: 2;
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1.2);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.2);   
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1.2);
-    transition: all 200ms ease-in;
-    transform: scale(1.2);
-}
-
-#admin_tasks {
-  visibility: hidden;
-}
-
-#close-admin {
-  visibility: hidden;
-}
-
-#open-admin{
-  margin-top: 10px;
+  -webkit-filter      : grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter              : grayscale(0%);
+  box-shadow          : 0px 0px 150px $gray;
+  z-index             : 6;
+  -webkit-transition  : all 200ms ease-in;
+  -webkit-transform   : scale(1.2);
+  -ms-transition      : all 200ms ease-in;
+  -ms-transform       : scale(1.2);
+  -moz-transition     : all 200ms ease-in;
+  -moz-transform      : scale(1.2);
+  transition          : all 200ms ease-in;
+  transform           : scale(1.2);
 }

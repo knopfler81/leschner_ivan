@@ -1,39 +1,36 @@
 body {
-  color              : #333;
-  background-color: #E2E2E2;
-  font-family        : 'Crimson Text', serif; 
-  font-size          : 13px;
-  line-height        : 18px;
+  background-color : #E2E2E2;
+  font-family      : 'Crimson Text', serif;
+  font-size        : 14px;
+  line-height      : 18px;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family        : 'Crimson Text', serif !important; 
+  font-family      : 'Crimson Text', serif !important;
 }
 
-
 .text-gold{
-  color: #75521a;
-  font-size: 18px;
+  color            : $dark-gold;
+  font-size        : 18px;
 }
 
 .btn-gold {
-  background-color: #75521a !important;
-  color: #eee !important;
+  background-color : $dark-gold !important;
+  color            : #eee !important;
 }
 
 a:link {
-  text-decoration: none;
+  text-decoration  : none;
 }
 
 #about {
-  padding: 10px;
+  padding          : 10px;
 }
 
-.login_form {
-  margin-top: 100px;
-  padding: 100px 50px 100px 50px;
-  background-color: #fff;
-  border: 1px solid #BBB;
-  border-radius: 3px;
-  box-shadow: 7px 11px 30px 0px rgba(0,0,0,0.75);
+.box-form-inline{
+  padding          : 50px;
+  background-color : #fff;
+  border           : 1px solid #BBB;
+  border-radius    : 3px;
+  box-shadow       : 7px 11px 30px 0px rgba(0,0,0,0.75);
 }

@@ -1,47 +1,37 @@
-#guitars{
-  margin-top             : 10px;
-.box{
-  //margin           : 10px;
-  margin: 10px auto;
-  width            : 280px;
-  box-shadow       : 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-  border-radius    : 8px 0px;
-  text-align       : center;
-  background-color : #fff;
-  img{
-    padding: 10px;
-    //border: 1px solid #DDD;
-    object-fit: cover;
-    width: 280px;
-    height: 150px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    display:inline-block;
+#guitars{ 
+  margin-top          : 10px;
+}
+
+.box {
+  margin              : 20px auto;
+  padding-bottom      : 10px;
+  width               : 280px;
+  box-shadow          : 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  border-radius       : 3px;
+  text-align          : center;
+  background-color    : #fff;
+  box-shadow          : 0 1px 2px rgba(0,0,0,0.15) !important;
+  transition          : box-shadow 0.3s ease-in-out !important;
+  img {
+  padding             : 10px;
+  object-fit          : cover;
+  width               : 280px;
+  height              : 150px;
+  background-position : center center;
+  background-repeat   : no-repeat;
+  display             : inline-block;
+  }
+  small {
+  color               : $gray;
+  }
+  h5 {
+    color             : $gray;
+  a:hover {
+    text-decoration   : none;
+    }
   }
 }
 
-}
-.panel{
-  small{
-    color            : #000000;
-  }
-  h5{
-    color            : #000000;
-  }
-  a:hover{
-    text-decoration  : none;
-  }
-
-  box-shadow         : 0 1px 2px rgba(0,0,0,0.15) !important;
-  transition         : box-shadow 0.3s ease-in-out !important;
-
-}
-
-.panel:hover{
-  box-shadow         :  0 5px 25px rgba(0,0,0,0.8) !important
-}
-
-
-.youtube_frame {
-  margin-top: 25px;
+.box:hover{
+  box-shadow          :  0 5px 25px rgba(0,0,0,0.8) !important;
 }
