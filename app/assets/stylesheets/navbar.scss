@@ -1,63 +1,91 @@
+.navbar-custom {
+  background-color : $gray;
+  height           : 7vh;
+  margin-bottom    : 40px;
+}
+
+.navbar-nav {
+  flex-direction   : row;
+}
+
+.nav-link {
+  padding-right    : .5rem !important;
+  padding-left     : .5rem !important;
+}
+
+.ml-auto .dropdown-menu {
+  left             : auto !important;
+  right            : 0px;
+}
+
 .navbar {
-  background-color: #141414;
-  z-index: 100;
-  a {
-    color: #eee;
+  background-color : $gray;
+  z-index          : 100;
+
+  .leschner-brand { 
+    margin           : 20px;
+    font-size        : 20px;
+    color            : rgba(238, 238, 238, 1) !important;
   }
-  a:hover { 
-    background-color: rgba(0, 0, 0, 0) !important;
-    border-bottom: 4px solid  #AB813E !important;
+
+  i {
+    color            : $gold;
   }
+
+  .dropdown-item {
+    background-color : rgba(0, 0, 0, 0) !important;
+    color            : #eee;
+  }
+
+  .dropdown-item:hover {
+    background-color : rgba(0, 0, 0, 0) !important;
+    border-bottom    : 1px solid $gold !important;
+    transition       : 0.3s ease-in-out;
+      i {
+    color            : #eee;
+      }
+  }
+
+  .nav-link:hover { 
+    background-color : rgba(0, 0, 0, 0) !important;
+    border-bottom    : 1px solid $gold !important;
+    transition       : .3s ease-in-out;
+  }
+
   .dropdown-menu {
+    background-color : $gray;
+    width            : 200px;
+    line-height      : 28px;
     a {
-      color: #75521a;
-      font-size: 12px;
-      padding-left: 10px;
+    font-size        : 14px;
+    padding-left     : 10px;
     }
   }
-}
 
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: rgba(0, 0, 0, 0) !important;
-  border-bottom: 4px solid  #AB813E !important;
-}
+  .dropdown-toggle::after {
+      display:none;
+  }
 
-.leschner-brand { 
-  margin: 20px;
-  font-size: 20px;
-  color: #eee !important;
-  font-family: 'leschnerfont';
-  a:hover {
-    color: #eee;
-    text-decoration: none;
-  }
-  a:visited {
-    color: #eee;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .nav {
-    li {
-      background-color: #75521a;
+    a:hover {
+      background-color : $gold !important;
+      border-bottom    : none !important;
     }
-    a:hover{
-      background-color: #AB813E !important;
-      border-bottom: none !important;
-    }
-  }
+  
 
   .icon-bar {
-    background-color: #eee;
+    background-color   : #eee;
   }
 
   .media {
-    text-align: center;
+    text-align         : center;
     ul{
-      list-style: none;
+      list-style       : none;
     }
     li{
-      margin-bottom: 10px;
+      margin-bottom    : 10px;
     }
   }
 }

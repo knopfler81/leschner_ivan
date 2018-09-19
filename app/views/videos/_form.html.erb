@@ -1,9 +1,14 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-offset-md-1 col-xs-12">
-			<%= simple_form_for @video do |f| %>
-				<%= f.input :url %>
-				<%= f.button :submit %>		
+		<div class="col-lg-5 col-md-5  offset-md-2 col-12">
+			<h1>New Media</h1>
+			<hr>
+			<br>
+		</div>
+		<div class="col-lg-8 col-md-8  offset-md-2 col-12">
+			<%= simple_form_for @video do |f| %> 
+				<%= f.input :url, autofocus: true, placeholder: "Please enter a valide Youtube URL", label: false,  id:"url_field" %>
+				<%= f.button :submit, "Submit", class:"btn btn-primary" %>		
 			<% end %>
 		</div>
 	</div>

@@ -1,16 +1,18 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 col-xs-12 ">
+		<div class="col-md-10 offset-md-1 col-12 ">
 			<h1><%= @progress.title %></h1> 
 			<p><%= simple_format(@progress.description) %></p>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 col-xs-12 ">
+		<div class="col-md-10 offset-md-1 col-12 ">
 			<div id="guitars_gallery">
-				<% @progress.pictures.each_with_index do | prog, index| %>
-					<%= render "images" , prog: prog , index: index %>
-				<% end %>
+				<div class="row">
+					<% @progress.pictures.each_with_index do | prog, index| %>
+						<%= render "images" , prog: prog , index: index %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>

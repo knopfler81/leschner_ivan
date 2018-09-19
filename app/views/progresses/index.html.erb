@@ -10,10 +10,10 @@
 		 		<% group.each do |prog| %>	
 		 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<%= link_to progress_path(prog) do %>
-						 <div class="box panel">
+						 <div class="box">
 						 		<%= image_tag prog.pictures.first.url if prog.pictures.present? %>
-						 		<div class="panel-body">
-		              <h4 class="text-gold"><%= prog.title.upcase %></h4> 
+						 		<div class="box-body">
+		              <h3 class="text-gold"><%= prog.title.upcase %></h3> 
 		              <h5><%= prog.created_at.strftime("%d/%m/%Y")%></h5>
 		              <small><%= truncate(prog.description, length: 100) %></small> 
 						 		</div>

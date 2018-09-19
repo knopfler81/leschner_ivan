@@ -3,7 +3,7 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
+  margin-top: -45px;
   text-align: center;
   color: white;
 }
@@ -11,5 +11,5 @@
   background: $green;
 }
 .alert-warning {
-  background: $red;
+  background: $orange;
 }

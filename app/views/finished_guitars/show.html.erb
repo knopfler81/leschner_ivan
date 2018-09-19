@@ -1,17 +1,18 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 col-xs-12 ">
+		<div class="col-md-10 offset-md-1 col-12 ">
 			<h1><%= @finished_guitar.title %></h1> 
 			<p><%= simple_format(@finished_guitar.description) %></p>
-		</div>
-		
+		</div>		
 	</div>
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 col-xs-12 ">
+		<div class="col-md-10 offset-md-1 col-12 ">
 			<div id="guitars_gallery">
-				<% @finished_guitar.attachments.each_with_index do | guitar, index| %>
-					<%= render "images" , guitar: guitar , index: index %>
-				<% end %>
+				<div class="row">
+					<% @finished_guitar.attachments.each_with_index do | guitar, index| %>
+						<%= render "images" , guitar: guitar , index: index %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>

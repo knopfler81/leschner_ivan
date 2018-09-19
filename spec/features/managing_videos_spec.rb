@@ -12,8 +12,8 @@ RSpec.feature "managing videos" do
 
 		scenario "create a new video" do 
 			visit new_video_path
-			fill_in "Url", with: "https://www.youtube.com/watch?v=oWYKTiqPvYA"
-			click_on "Create Video"
+			fill_in "video[url]", with: "https://www.youtube.com/watch?v=oWYKTiqPvYA"
+			click_on "Submit"
 			expect(page).to have_content("Video was successfully created")
 		end
 
@@ -23,8 +23,8 @@ RSpec.feature "managing videos" do
 			visit videos_path
 			first(:css, ".edit_link").click
 
-			fill_in "Url", with: "https://www.youtube.com/watch?v=UxIPVAPRBi4"
-			click_on "Update Video"
+			fill_in "video[url]", with: "https://www.youtube.com/watch?v=UxIPVAPRBi4"
+			click_on "Submit"
 
 			expect(page).to have_content("Video was successfully updated")
 		end

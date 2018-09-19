@@ -4,18 +4,18 @@
 			<h1>FINISHED GUITARS</h1>
 			<hr>
 		</div>
-		<div id="guitars" class="transitions-enabled">
+		<div id="guitars">
 			<% @finished_guitars.in_groups_of(4, false).each do |group|  %>
 			 	<div class="row">			
 					<% group.each do |guitar| %>
 			 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 							<%= link_to finished_guitar_path(guitar) do %>
-							 <div class="box panel">
+							 <div class="box">
 							 		<%= image_tag guitar.attachments.first.url if guitar.attachments.present? %>
-							 		<div class="panel-body">
-			              <h4 class="text-gold"><%= guitar.title.upcase %></h4> 
+							 		<div class="box-body">
+			              <h3 class="text-gold"><%= guitar.title.upcase %></h3> 
 			              <h5><%= guitar.created_at.strftime("%d/%m/%Y")%></h5>
-			              <small><%= truncate(guitar.description, length: 100) %></small> 
+			              <small><%= truncate(guitar.description, length: 50) %></small> 
 							 		</div>
 							 </div>
 						 <% end %>
