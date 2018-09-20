@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="col-md-5 col-xs-12">	
+		<div class="col-md-5 col-12">	
 			<h2>Edit text</h2>
 			<hr>
 			<%= simple_form_for @finished_guitar, html: { multipart: true } do |f| %>
@@ -8,15 +8,15 @@
 				<%= f.input :description, input_html: {rows: "10"} %>
 				<!-- la fermeture de la boucle est à la fin du container -->
 		</div>
-		<div class="col-md-5 offset-md-1 col-xs-12">
+		<div class="col-md-5 offset-md-1 col-12">
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-12">
 					<h2>Manage your pictures</h2>
 					<hr>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-xs-12">
+				<div class="col-12">
 					<% @finished_guitar.attachments.each_with_index do | guitar, index| %>
 							<%= image_tag guitar.url, class: "tiny_image" %>
 						<% if current_user %>
@@ -28,7 +28,7 @@
 				</div>
 			</div>
 				<div class="row">
-					<div class="col-xs-12">
+					<div class="col-12">
 						<hr>
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addpicmodal">
 						  Add pictures
@@ -39,7 +39,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col-12">
 			<br>
 			<hr>
 		</div>

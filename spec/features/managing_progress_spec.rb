@@ -13,8 +13,8 @@ RSpec.feature "Managing progress" do
 
 		scenario "create progress" do 
 			visit new_progress_path
-			fill_in "Title", with: "Gibson Les Paul"
-			fill_in "Description", with: "Super progresse...."
+			fill_in "progress[title]", with: "Gibson Les Paul"
+			fill_in "progress[description]", with: "Super progresse...."
 
 			within "#prog_label_uploader" do 
 				within "#prog_span_uploader" do 
@@ -33,7 +33,7 @@ RSpec.feature "Managing progress" do
 
 			find(".fa-edit").click
 
-			fill_in "Title", with: "Fender Telecaster"
+			fill_in "progress[title]", with: "Fender Telecaster"
 			click_on "Update Me"
 
 			expect(page).to have_content("Work In Progress was successfully updated")

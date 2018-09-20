@@ -12,8 +12,8 @@ RSpec.feature "managing finished guitar" do
 
 		scenario "create a new guitar" do 
 			visit new_finished_guitar_path
-			fill_in "Title", with: "Gibson Les Paul"
-			fill_in "Description", with: "Super guitar...."
+			fill_in "finished_guitar[title]", with: "Gibson Les Paul"
+			fill_in "finished_guitar[description]", with: "Super guitar...."
 
 			within "#label_uploader" do 
 				within "#span_uploader" do 
@@ -33,7 +33,7 @@ RSpec.feature "managing finished guitar" do
 
 			find(".edit_link").click
 
-			fill_in "Title", with: "Fender Telecaster"
+			fill_in "finished_guitar[title]", with: "Fender Telecaster"
 
 			click_on "Update Me"
 

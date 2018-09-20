@@ -1,33 +1,31 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-			<h1>MEDIA</h1>
+			<h1 class='main_title'>MEDIA</h1>
 			<hr>
 		</div>
 	</div>
+
 	<div class="row">
-		<div class="col-12">
-			<% @videos.in_groups_of(3, false).each do |group| %>
-			<div class="row">
-				<% group.each do |video| %>	
-					<div class="col-md-4 col-sm-6 col-12">
-						<div class="youtube_frame">
-							<iframe allowfullscreen="" frameborder="0" height="200" width="300" src="<%= video.embed %>"></iframe>
-							<br>
-							<i><%= video.created_at.strftime("%B %d, %Y") %>&nbsp&nbsp</i> 
-							<% if current_user %>
-								<%= link_to video_path(video), method: :delete, data: {confirm: "Are you sure?"}, class: "delete_link"  do %>
-									<i class="fas fa-trash-alt trash">&nbsp&nbsp</i>
-								<% end %>
-								<%= link_to edit_video_path(video), class: "edit_link" do %>
-									<i class="fas fa-edit edit">&nbsp&nbsp</i>
-								<% end %>
-							<% end %>
-						</div>
-					</div>
-				<% end %>	
+		<% @videos.each do |video| %>	
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+				<div class="youtube_frame">
+					<iframe allowfullscreen="" frameborder="0" height="160" width="260" src="<%= video.embed %>"></iframe>
+					<br>
+					<i><%= video.created_at.strftime("%B %d, %Y") %>&nbsp&nbsp</i> 
+					<% if current_user %>
+						<%= link_to video_path(video), method: :delete, data: {confirm: "Are you sure?"}, class: "delete_link"  do %>
+							<i class="fas fa-trash-alt trash">&nbsp&nbsp</i>
+						<% end %>
+						<%= link_to edit_video_path(video), class: "edit_link" do %>
+							<i class="fas fa-edit edit">&nbsp&nbsp</i>
+						<% end %>
+					<% end %>
+				</div>
 			</div>
-			<% end %>
-		</div>
+		<% end %>	
+	</div>
+
+
 	</div>
 </div>
