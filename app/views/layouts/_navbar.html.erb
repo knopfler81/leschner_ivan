@@ -1,43 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-custom navbar-dark navbar-fixed-top">
-  <%= link_to "LESCHNER", root_path, class: "leschner-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-    <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item">
-        <%= link_to "ABOUT", "#about_modal", "data-toggle"=>"modal", "data-target"=>".bd-example-modal-lg", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "WORK IN PROGRESS", progresses_path, class: "nav-link" %>
-      </li>
+<div class="header">
+  <nav class="navbar navbar-expand-lg navbar-custom navbar-dark bg-dark navbar-fixed-top">
+
+    <%= link_to "LESCHNER", root_path, class: "leschner-brand" %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarSupportedContent" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
-        <%= link_to "FINISHED GUITARS", finished_guitars_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "MEDIA", videos_path, class: "nav-link" %>
-      </li>
-      <% if current_user %>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-unlock-alt">&nbsp&nbsp</i>ADMIN
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to new_video_path, class: "dropdown-item" do %>
-            <i class="fab fa-youtube">&nbsp&nbsp</i>MEDIA
-          <% end %>
-          <%= link_to new_finished_guitar_path, class: "dropdown-item" do %>
-            <i class="fas fa-check-circle">&nbsp&nbsp</i>FINISHED GUITAR
-          <% end %>
-          <%= link_to new_progress_path, class: "dropdown-item" do %>
-            <i class="fas fa-screwdriver">&nbsp&nbsp</i>WORK IN PROGRESS
-          <% end %>
-          <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
-            <i class="fas fa-sign-out-alt">&nbsp&nbsp</i>LOG OUT
-          <% end %>
-        </div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-</nav>
+          <%= link_to "ABOUT", "#about_modal", "data-toggle"=>"modal", "data-target"=>".bd-example-modal-lg", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "WORK IN PROGRESS", progresses_path, class: "nav-link" %>
+        </li>
+          <li class="nav-item">
+          <%= link_to "FINISHED GUITARS", finished_guitars_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "MEDIA", videos_path, class: "nav-link" %>
+        </li>
+        <% if current_user %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-unlock-alt">&nbsp&nbsp</i>ADMIN
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to new_video_path, class: "dropdown-item" do %>
+              <i class="fab fa-youtube">&nbsp&nbsp</i>MEDIA
+            <% end %>
+            <%= link_to new_finished_guitar_path, class: "dropdown-item" do %>
+              <i class="fas fa-check-circle">&nbsp&nbsp</i>FINISHED GUITAR
+            <% end %>
+            <%= link_to new_progress_path, class: "dropdown-item" do %>
+              <i class="fas fa-screwdriver">&nbsp&nbsp</i>WORK IN PROGRESS
+            <% end %>
+            <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
+              <i class="fas fa-sign-out-alt">&nbsp&nbsp</i>LOG OUT
+            <% end %>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>

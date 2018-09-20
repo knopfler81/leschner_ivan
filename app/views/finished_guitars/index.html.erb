@@ -1,28 +1,28 @@
 <div class="container">
+
+
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>FINISHED GUITARS</h1>
+			<h1 class='main_title'>FINISHED GUITARS</h1>
 			<hr>
 		</div>
-		<div id="guitars">
-			<% @finished_guitars.in_groups_of(4, false).each do |group|  %>
-			 	<div class="row">			
-					<% group.each do |guitar| %>
-			 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-							<%= link_to finished_guitar_path(guitar) do %>
-							 <div class="box">
-							 		<%= image_tag guitar.attachments.first.url if guitar.attachments.present? %>
-							 		<div class="box-body">
-			              <h3 class="text-gold"><%= guitar.title.upcase %></h3> 
-			              <h5><%= guitar.created_at.strftime("%d/%m/%Y")%></h5>
-			              <small><%= truncate(guitar.description, length: 50) %></small> 
-							 		</div>
-							 </div>
-						 <% end %>
-				 		</div>
-					<% end %>
-			 	</div>
-		 	<% end %>
-		</div>
 	</div>
+
+	<div class="row">			
+		<% @finished_guitars.each do |guitar|  %>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+				<%= link_to finished_guitar_path(guitar) do %>
+				 	<div class="box">
+				 		<%= image_tag guitar.attachments.first.url if guitar.attachments.present? %>
+				 		<div class="box-body">
+		          <h3 class="text-gold"><%= guitar.title.upcase %></h3> 
+		          <h5><%= guitar.created_at.strftime("%d/%m/%Y")%></h5>
+		          <small><%= truncate(guitar.description, length: 50) %></small> 
+				 		</div>
+				 	</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+
 </div>
