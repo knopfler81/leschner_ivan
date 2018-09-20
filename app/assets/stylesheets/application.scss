@@ -2,6 +2,23 @@
 //= require photoswipe
 */
 
+$red: #EE5F5B !default;
+$blue: #469AE0 !default;
+$yellow: #FDB631 !default;
+$orange: #E67E22 !default;
+$green: #32B796 !default;
+$gray: #141414 !default;
+$light-gray: #F4F4F4 !default;
+$gold: #AB813E;
+$dark-gold: #75521a;
+
+$theme-colors: (
+  primary: $gold,
+  success: $green,
+  warning: $orange,
+  danger: $red,
+);
+
 
 // External libraries
 @import "bootstrap";
@@ -10,11 +27,8 @@
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 // Graphical variables
 @import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
 // Your CSS partials
 @import "layouts/index";
-@import "components/index";
 @import "components/alert";
 
 
@@ -23,9 +37,18 @@
 	margin: 10px;
 }
 
-.img_modal {
+.avatar_modal {
 	height: 50px;
+	width: 50px;
 	border-radius: 50%;
+	padding             : 2px;
+  border              : 1px solid #DDD;
+  object-fit          : cover;
+  background-position : center center;
+  background-repeat   : no-repeat;
+  display             : inline-block;
+  border              : 0;
+  position            : relative;
 }
 
 .modal-header {

@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1 class='main_title'>WORK IN PROGRESS</h1>
+			<h1 class='big_title'>WORK IN PROGRESS</h1>
 			<hr>
 		</div>
 	</div>
@@ -13,9 +13,9 @@
 				 	<div class="box">
 				 		<%= image_tag prog.pictures.first.url if prog.pictures.present? %>
 				 		<div class="box-body">
-		          <h3 class="text-gold"><%= prog.title.upcase %></h3> 
-		          <h5><%= prog.created_at.strftime("%d/%m/%Y")%></h5>
-		          <small><%= truncate(prog.description, length: 50) %></small> 
+		          <h2><%= prog.title.upcase %></h2> 
+		          <p><%= prog.created_at.strftime("%A %d %b %Y")%></p>
+		          <small><%= truncate(prog.description, length: 100) %></small> 
 				 		</div>
 				 	</div>
 				<% end %>

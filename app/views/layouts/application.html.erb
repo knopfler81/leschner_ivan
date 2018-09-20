@@ -8,11 +8,73 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
-  <body>
+  <style> /*on gère ici le style de la customization*/
+
+    .big_title {
+      color: <%= prefered_big_title_color %>;
+    }
+    h2, h4 {
+      color: <%= prefered_primary_color %>;
+    }
+
+    .nav-item {
+      color: <%= prefered_navbar_links_color %>;
+    }
+
+    .nav-item i {
+      color: <%= prefered_primary_color %>;
+    }
+
+    .nav-item:hover {
+      border-bottom    : 1px solid <%= prefered_primary_color %> !important;
+    }
+
+    .dropdown-item:hover {
+      border-bottom    : 1px solid <%= prefered_primary_color %> !important;
+    }
+
+    #drop-down {
+      background-color: <%= prefered_navbar_color %>;
+    }
+    
+    .btn-primary {
+      background-color: <%= prefered_primary_color %>;
+      border:<%= prefered_primary_color %>;
+    }
+
+    .btn-primary:hover {
+      background-color: <%= prefered_primary_color %>;
+      border:  <%= prefered_primary_color %>;      
+    }
+
+    .btn-danger {
+      background-color: <%= prefered_secondary_color %>;
+      border:  <%= prefered_secondary_color %>;
+    }
+
+    .btn-danger:hover {
+      background-color: <%= prefered_secondary_color %>;
+      border:  <%= prefered_secondary_color %>;
+      color: #fff;
+    }
+    
+    .dropdown-menu i {
+      color: <%= prefered_primary_color %>;
+    }
+
+    p {
+      color: <%= prefered_paragraphe_color %>;
+    }
+
+    .round #tawkchat-status-text-container a#maximizeChat, .round #tawkchat-status-text-container a#maximizeChat #tawkchat-status-icon {
+      background-color: <%= prefered_primary_color %> !important;
+    }
+    
+  </style>
+  <body style="background: <%= prefered_background_color %>">
     <%= render "layouts/navbar" %>
     <%= render "layouts/shared/about_modal" %>
     <%= render "layouts/shared/flashes" %>
-
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>   

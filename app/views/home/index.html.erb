@@ -1,38 +1,40 @@
 <div class="bg-image">
+	<style>
+		.bg-image { background-image: url("<%= @customization.main_image.present? ?  @customization.main_image_url : 'https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/head.jpg'%>") }
+	</style>
 	<div class="container">
 	  <div class="row">	
 	    <div class="welcome-text">
-	      <h1>LESCHNER GUITARS </h1>
-	      <p>LUTHIER IN BUENOS AIRES</p>
+	      <h1 class="main-title">LESCHNER GUITARS </h1>
+	      <h2>LUTHIER IN BUENOS AIRES</h2>
 	    </div>
 	  </div>
 	</div>
 </div>
-
 
 <section class="company-work">
 	<div class="row">
 		<div class="col-12 col-md-4 col-lg-4">
 			<%= link_to progresses_path do %>
 			<figure class="figure">
-				<%= image_tag("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/workinprogress.jpg", class: 'figure-img img-fluid') %>
-				<figcaption class="figure-caption text-gold">Work In Progress</figcaption>
+				<%= image_tag(@customization.first_section_image_url.present? ? @customization.first_section_image_url : "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/workinprogress.jpg", class: 'figure-img img-fluid') %>
+				<figcaption class="figure-caption text-gold"><h4>Work In Progress</h4></figcaption>
 			</figure>
 			<% end %>
 		</div>
 		<div class="col-12 col-md-4 col-lg-4">
 			<%= link_to finished_guitars_path do %>
 			<figure class="figure">
-				<%= image_tag("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/finishedguitars.jpg", class: 'figure-img img-fluid') %>
-				<figcaption class="figure-caption text-gold">Finished Guitars</figcaption>
+				<%= image_tag(@customization.second_section_image_url.present? ? @customization.second_section_image_url : "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/finishedguitars.jpg", class: 'figure-img img-fluid') %>
+				<figcaption class="figure-caption text-gold"><h4>Finished Guitars</h4></figcaption>
 			</figure>
 			<% end %>
 		</div>
 		<div class="col-12 col-md-4 col-lg-4">
 			<%= link_to videos_path do %>
 			<figure class="figure">
-				<%= image_tag("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/media2.jpg", class: 'figure-img img-fluid') %>
-				<figcaption class="figure-caption text-gold">Media</figcaption>
+				<%= image_tag(@customization.third_section_image_url.present? ? @customization.third_section_image_url : "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/media2.jpg",  class: 'figure-img img-fluid') %>
+				<figcaption class="figure-caption text-gold"><h4>Media</h4></figcaption>
 			</figure>
 			<% end %>
 		</div>	
