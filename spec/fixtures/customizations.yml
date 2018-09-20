@@ -1,0 +1,4 @@
+custo:
+  about: "That's my bio!!"
+  avatar: [<%= Rails.root.join("spec/assets/images/img_2.jpg") %>]
+  third_section_image: [<%= Rails.root.join("spec/assets/images/img_2.jpg") %>]

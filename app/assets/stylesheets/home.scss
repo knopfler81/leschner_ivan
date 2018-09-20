@@ -1,5 +1,4 @@
 .bg-image {
-  background-image             : url("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/head.jpg");
   background-repeat            : no-repeat;
   background-attachment        : fixed;
   -o-background-size           : cover;
@@ -32,7 +31,6 @@
     }
    }
 
-
 .figure:hover{
   box-shadow                   : 0 5px 25px rgba(0,0,0,0.8) !important;
   position                     : relative;
@@ -57,7 +55,7 @@
     padding                    : 10px;
     object-fit                 : cover;
     width                      : 380px;
-    height                     : auto;
+    height                     : 240px;
     background-position        : center center;
     background-repeat          : no-repeat;
     display                    : inline-block;

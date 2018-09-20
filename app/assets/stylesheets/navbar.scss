@@ -49,6 +49,10 @@
     font-size        : 14px;
     padding-left     : 10px;
     }
+
+    a:hover {
+      background-color: rgba(0,0,0,0)!important;
+    }
   }
 
   .dropdown-toggle::after {

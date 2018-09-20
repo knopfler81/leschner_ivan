@@ -8,6 +8,7 @@
 		<div class="col-lg-8 col-md-8  offset-md-2 col-12">
 			<%= simple_form_for @video do |f| %> 
 				<%= f.input :url, autofocus: true, placeholder: "Please enter a valide Youtube URL", label: false,  id:"url_field" %>
+				<p> * The URL cannot contain spaces</p>
 				<%= f.button :submit, "Submit", class:"btn btn-primary" %>		
 			<% end %>
 		</div>

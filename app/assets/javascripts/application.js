@@ -12,14 +12,13 @@ window.setTimeout(function() {
   });
 }, 3000);
 
-
-// $(document).ready(function(){ 
-// 	$('.navbar .navbar-nav > li.dropdown').hover(function(){
-// 	 $('.dropdown-menu', this).stop(true, true).slideDown(); 
-// 	 $(this).addClass('show');
-// 	 }, 
-// 	function(){ 
-// 		$('.dropdown-menu', this).stop(true, true).slideUp(); 
-// 		$(this).removeClass('show');
-// 	});
-// });
+$(document).ready(function(){ 
+	$('.navbar .navbar-nav > li.dropdown').hover(function(){
+	 $('.dropdown-menu', this).stop(true, true).slideDown(); 
+	 $(this).addClass('show');
+	 }, 
+	function(){ 
+		$('.dropdown-menu', this).stop(true, true).slideUp(); 
+		$(this).removeClass('show');
+	});
+});

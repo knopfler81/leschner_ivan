@@ -1,0 +1,130 @@
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<h1>Customization</h1>
+			<br>
+		</div>
+	</div>
+	<div class="content-custo">
+		<%= simple_form_for @customization, html: { multipart: true }  do |f| %>
+				<div class="set_images">
+					<h2>Images</h2>
+					<hr>
+					<br>
+					<div class="row">
+						<div class="col-6">
+							<div class="custo-boxes">
+								<h4><i class="fas fa-image"></i> Cover</h4>
+								<hr>
+								<div class="row">
+									<div class="col-6">
+										<%= image_tag @customization.main_image_url, class: "tiny_image" %>
+									</div>
+									<div class="col-6">
+										<label class="btn btn-primary" >Choose file</label>
+										<%= f.file_field :main_image, id: "main_image_upload", class: "input_file" %><br/> 
+										<%= f.hidden_field :main_image_cache %>
+										<img id="main_img_prev" src="#" class= "hidden"/> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="custo-boxes">
+								<h4><i class="fas fa-image"></i> Work In Progress</h4>
+								<hr>
+								<div class="row">
+									<div class="col-6">
+										<%= image_tag @customization.first_section_image_url, class: "tiny_image" %>
+									</div>
+									<div class="col-6">
+										<label class="btn btn-primary" >Choose file</label>
+										<%= f.file_field :first_section_image, id: "first_section_image_upload", class: "input_file" %><br/> 
+										<%= f.hidden_field :first_section_image_cache %>
+										<img id="first_section_img_prev" src="#"  class= "hidden"/> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="custo-boxes">
+								<h4><i class="fas fa-image"></i> Finished Guitar</h4>
+								<hr>
+								<div class="row">
+									<div class="col-6">
+										<%= image_tag @customization.second_section_image_url, class: "tiny_image" %>
+									</div>
+									<div class="col-6">
+										<label class="btn btn-primary" >Choose file</label>
+										<%= f.file_field :second_section_image, id: "second_section_image_upload" , class: "input_file"%><br/> 
+										<%= f.hidden_field :second_section_image_cache %>
+										<img id="second_section_img_prev" src="#"  class= "hidden"/> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="custo-boxes">
+								<h4><i class="fas fa-image"></i> Media</h4>
+								<hr>
+								<div class="row">
+									<div class="col-6">
+										<%= image_tag @customization.third_section_image_url, class: "tiny_image" %>
+										<%= f.check_box :remove_second_section_image %>
+									</div>
+									<div class="col-6">
+										<label class="btn btn-primary" >Choose file</label>
+										<%= f.file_field :third_section_image, id: "third_section_image_upload", class: "input_file" %><br/> 
+										<%= f.hidden_field :third_section_image_cache %>
+										<img id="third_section_img_prev" src="#"  class= "hidden"/> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="custo-boxes">
+								<h4><i class="fas fa-image"></i> Avatar</h4>
+								<hr>
+								<div class="row">
+									<div class="col-6">
+										<%= image_tag @customization.avatar_url, class: "tiny_image" %>
+									</div>
+									<div class="col-6">
+										<label class="btn btn-primary" >Choose file</label>
+										<%= f.file_field :avatar, id: "avatar_upload", class: "input_file" %><br/> 
+										<%= f.hidden_field :avatar_cache %>
+										<img id="avatar_prev" src="#"  class= "hidden"/> 
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="set_about">
+					<h2>Text</h2>
+					<hr>
+					<div class="custo-boxes">
+						<h4><i class="far fa-file-alt"></i> About</h4>
+						<div class="row">
+							<div class="col-12">
+								<%= f.input :about, as: :text, input_html: {rows: 8}, label: false %>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="row">
+				<div class="col-3 offset-9">
+					<br><br>
+					<%= f.button :submit,  class:"btn btn-danger" %>
+				</div>
+			</div>
+		</div>
+		<% end %>		
+	</div>  
+</div>
+

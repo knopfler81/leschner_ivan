@@ -11,9 +11,9 @@
 				<div class="container">
           <%= simple_form_for @finished_guitar, url: finished_guitar_attachments_path(@finished_guitar), method: :post do |f| %>
             <label class="btn btn-primary" id="label_uploader_2">
-              Add Files
+              Choose Files
               <span id="span_uploader_2" >
-                <%= f.file_field :attachments, multiple: true %>
+                <%= f.file_field :attachments, multiple: true, class: "input_file" %>
               </span>
             </label>
            <%= f.button :submit, "Update", class: "btn btn-primary" %>
