@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.feature "Managing progress" do 
 
 	fixtures :progresses, :user

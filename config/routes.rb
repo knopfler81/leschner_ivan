@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :finished_guitars
   resources :videos
   resources :progresses
+  resource :customization, only: [:show, :update], controller: "customization"
 
   get    "/admin",  to: "sessions#new"
   post   "/login",  to: "sessions#create"

@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_14_090433) do
+ActiveRecord::Schema.define(version: 2018_09_22_152005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customizations", force: :cascade do |t|
+    t.string "main_image"
+    t.string "first_section_image"
+    t.string "second_section_image"
+    t.string "third_section_image"
+    t.string "menu_color"
+    t.string "body_color"
+    t.string "icon_color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "about"
+    t.string "avatar"
+  end
 
   create_table "finished_guitars", force: :cascade do |t|
     t.string "title"

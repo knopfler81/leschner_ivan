@@ -13,7 +13,7 @@
             <label class="btn btn-primary" id="prog_label_uploader_2">
               Add Files
               <span id="prog_span_uploader_2" >
-                <%= f.file_field :pictures, multiple: true %>
+                <%= f.file_field :pictures, multiple: true, class: "input_file" %>
               </span>
             </label>
            <%= f.button :submit, "Update", class: "btn btn-primary" %>
