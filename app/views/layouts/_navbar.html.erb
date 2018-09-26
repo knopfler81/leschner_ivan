@@ -1,6 +1,5 @@
 <div class="header">
-  <nav class="navbar navbar-expand-lg navbar-custom navbar-dark bg-dark navbar-fixed-top">
-
+  <nav class="navbar navbar-expand-lg navbar-custom navbar-dark bg-dark navbar-fixed-top" style= "background: <%= prefered_navbar_color %>!important;" id="my_nav">
     <%= link_to "LESCHNER", root_path, class: "leschner-brand" %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -22,23 +21,26 @@
         <% if current_user %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-unlock-alt">&nbsp&nbsp</i>ADMIN
+            <i class="icon fas fa-unlock-alt">&nbsp&nbsp</i>ADMIN
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: <%= prefered_navbar_color %>!important;">
             <%= link_to new_video_path, class: "dropdown-item" do %>
-              <i class="fab fa-youtube">&nbsp&nbsp</i>MEDIA
+              <i class="icon fab fa-youtube">&nbsp&nbsp</i>MEDIA
             <% end %>
             <%= link_to new_finished_guitar_path, class: "dropdown-item" do %>
-              <i class="fas fa-check-circle">&nbsp&nbsp</i>FINISHED GUITAR
+              <i class="icon fas fa-check-circle">&nbsp&nbsp</i>FINISHED GUITAR
             <% end %>
             <%= link_to new_progress_path, class: "dropdown-item" do %>
-              <i class="fas fa-screwdriver">&nbsp&nbsp</i>WORK IN PROGRESS
+              <i class="icon fas fa-screwdriver">&nbsp&nbsp</i>WORK IN PROGRESS
+            <% end %>
+            <%= link_to customization_path, class: "dropdown-item" do %>
+              <i class="ficon as fa-sliders-h">&nbsp&nbsp</i>CUSTOMISATION
             <% end %>
             <%= link_to customization_path, class: "dropdown-item" do %>
               <i class="fas fa-sliders-h">&nbsp&nbsp</i>CUSTOMISATION
             <% end %>
             <%= link_to logout_path, method: :delete, class: "dropdown-item" do %>
-              <i class="fas fa-sign-out-alt">&nbsp&nbsp</i>LOG OUT
+              <i class="icon fas fa-sign-out-alt">&nbsp&nbsp</i>LOG OUT
             <% end %>
           </div>
         </li>

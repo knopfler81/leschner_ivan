@@ -23,6 +23,7 @@ gem 'fog'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem "mini_magick"
 
+gem 'react-rails'
 
 gem 'photoswipe-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'

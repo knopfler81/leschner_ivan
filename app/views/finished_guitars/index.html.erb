@@ -3,7 +3,7 @@
 
 	<div class="row">
 		<div class="col-xs-12">
-			<h1 class='main_title'>FINISHED GUITARS</h1>
+			<h1 class='big_title'>FINISHED GUITARS</h1>
 			<hr>
 		</div>
 	</div>
@@ -15,14 +15,13 @@
 				 	<div class="box">
 				 		<%= image_tag guitar.attachments.first.url if guitar.attachments.present? %>
 				 		<div class="box-body">
-		          <h3 class="text-gold"><%= guitar.title.upcase %></h3> 
-		          <h5><%= guitar.created_at.strftime("%d/%m/%Y")%></h5>
-		          <small><%= truncate(guitar.description, length: 50) %></small> 
+		          <h2><%= guitar.title.upcase %></h2> 
+		          <small><%= truncate(guitar.description, length: 100) %></small> 
+		          <p><%= guitar.created_at.strftime("%A %d %b %Y")%></p>
 				 		</div>
 				 	</div>
 				<% end %>
 			</div>
 		<% end %>
 	</div>
-
 </div>

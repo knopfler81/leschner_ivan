@@ -1,7 +1,7 @@
 body {
   background-color : #E2E2E2;
   font-family      : 'Crimson Text', serif;
-  font-size        : 14px;
+  //font-size        : 14px;
   line-height      : 18px;
 }
 
@@ -9,10 +9,10 @@ h1, h2, h3, h4, h5 {
   font-family      : 'Crimson Text', serif !important;
 }
 
-.text-gold{
-  color            : $dark-gold;
-  font-size        : 18px;
-}
+// .text-gold{
+//   color            : $dark-gold;
+//   font-size        : 18px;
+// }
 
 .btn-gold {
   background-color : $dark-gold !important;

@@ -10,13 +10,4 @@ class Customization < ApplicationRecord
 	def self.instance
 		Customization.find_or_create_by(id: INSTANCE_ID)
 	end
-
-
-
-	# def third_section_image_url(customization)
-	# 	if customization.third_section_image_url.present?
-	# 		customization.third_section_image_url
-	# 	end
-	# end
-	
 end

@@ -1,12 +1,91 @@
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-			<h1>Customization</h1>
+			<h1 class="big_title">CUSTOMIZATION</h1>
 			<br>
 		</div>
 	</div>
 	<div class="content-custo">
 		<%= simple_form_for @customization, html: { multipart: true }  do |f| %>
+			<div class="set_colors">
+				<h2>Colors</h2>
+				<hr>
+				<div class="custo-boxes">
+					<div class="row">
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Background</h4> 
+								<%= f.hidden_field :background_color %>
+								<%= react_component('ColorpickerBackground', { color: prefered_background_color, selector: 'customization_background_color'} ) %>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Menu Background</h4>
+								<%= f.hidden_field :navbar_color %>
+								<%= react_component('ColorpickerNavbar', { color: prefered_navbar_color, selector: 'customization_navbar_color'} ) %>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Menu Tags</h4>
+								<%= f.hidden_field :navbar_links_color %>
+								<%= react_component('ColorpickerNavLinks', { color: prefered_navbar_links_color, selector: 'customization_navbar_links_color'} ) %>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-8">
+							<div class="picker">
+								<%= link_to "Primary", "#",  class: "btn btn-primary" %> <br><br>
+								<%= link_to "Secondary", "#", class: "btn btn-danger" %>
+								<hr>
+								<h1 class="big_title">I am a big Title</h1>
+								<h2>I am an exemple of Primary text</h2>
+								<hr>								<i class= "fa fa-palette icon">Primary Icon</i>
+								<hr>
+								<p>This is a bit of paragrapheFusce vel dui. Phasellus ullamcorper ipsum rutrum nunc. Morbi ac felis. </p>
+								<p>This is a bit of paragraphe Fusce vel dui. Phasellus ullamcorper ipsum rutrum nunc. Morbi ac felis.Quisque malesuada placerat nisl. Praesent adipiscing. Quisque id mi. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Vestibulum dapibus nunc ac augue.</p>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Primary </h4>
+								<%= f.hidden_field :primary_color %>
+								<%= react_component('ColorpickerPrimary', { color: prefered_primary_color, selector: 'customization_primary_color'} ) %>
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Secondary </h4>
+								<%= f.hidden_field :secondary_color %>
+								<%= react_component('ColorpickerSecondary', { color: prefered_secondary_color, selector: 'customization_secondary_color'} ) %>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Text</h4>
+								<%= f.hidden_field :paragraphe_color %>
+								<%= react_component('ColorpickerParagraphe', { color: prefered_paragraphe_color, selector: 'customization_paragraphe_color'} ) %>
+							</div>
+						</div>
+						<div class="col-4">
+							<div class="picker">
+								<h4><i class="fas fa-palette icon"></i> Big titles </h4>
+								<%= f.hidden_field :big_title_color %>
+								<%= react_component('ColorpickerBigTitle', { color: prefered_big_title_color, selector: 'customization_big_title_color'} ) %>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+				
+					</div>
+			</div>
+			</div>
 				<div class="set_images">
 					<h2>Images</h2>
 					<hr>
@@ -14,7 +93,7 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image"></i> Cover</h4>
+								<h4><i class="fas fa-image icon"></i> Cover</h4>
 								<hr>
 								<div class="row">
 									<div class="col-6">
@@ -31,7 +110,7 @@
 						</div>
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image"></i> Work In Progress</h4>
+								<h4><i class="fas fa-image icon"></i> Work In Progress</h4>
 								<hr>
 								<div class="row">
 									<div class="col-6">
@@ -50,7 +129,7 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image"></i> Finished Guitar</h4>
+								<h4><i class="fas fa-image icon"></i> Finished Guitar</h4>
 								<hr>
 								<div class="row">
 									<div class="col-6">
@@ -67,12 +146,11 @@
 						</div>
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image"></i> Media</h4>
+								<h4><i class="fas fa-image icon"></i> Media</h4>
 								<hr>
 								<div class="row">
 									<div class="col-6">
 										<%= image_tag @customization.third_section_image_url, class: "tiny_image" %>
-										<%= f.check_box :remove_second_section_image %>
 									</div>
 									<div class="col-6">
 										<label class="btn btn-primary" >Choose file</label>
@@ -87,7 +165,7 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image"></i> Avatar</h4>
+								<h4><i class="fas fa-image icon"></i> Avatar</h4>
 								<hr>
 								<div class="row">
 									<div class="col-6">
@@ -101,7 +179,6 @@
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -109,7 +186,7 @@
 					<h2>Text</h2>
 					<hr>
 					<div class="custo-boxes">
-						<h4><i class="far fa-file-alt"></i> About</h4>
+						<h4><i class="far fa-file-alt icon"></i> About</h4>
 						<div class="row">
 							<div class="col-12">
 								<%= f.input :about, as: :text, input_html: {rows: 8}, label: false %>
@@ -117,14 +194,17 @@
 						</div>
 					</div>
 				</div>
-			<div class="row">
-				<div class="col-3 offset-9">
-					<br><br>
-					<%= f.button :submit,  class:"btn btn-danger" %>
+				<div class="row">
+					<div class="col-3 offset-6">
+
+						<%= link_to "Reset to default layout", reset_customization_path(@customization), class: "btn btn-lg btn-reset" %>
+					</div>
+					<div class="col-3">
+						<%= f.button :submit,  class: "btn btn-lg btn-danger" %>
+					</div>
 				</div>
-			</div>
-		</div>
 		<% end %>		
-	</div>  
-</div>
+	</div>
+</div>  
+
 

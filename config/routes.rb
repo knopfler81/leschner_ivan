@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   resources :finished_guitars
   resources :videos
   resources :progresses
-  resource :customization, only: [:show, :update], controller: "customization"
+
+  resource :customization, only: [:show, :update], controller: "customization" do 
+     member do
+      get :reset
+    end
+  end
 
   get    "/admin",  to: "sessions#new"
   post   "/login",  to: "sessions#create"
@@ -16,5 +21,4 @@ Rails.application.routes.draw do
    resources :progresses do
     resources :pictures, :only => [:create, :destroy]
   end
-
 end

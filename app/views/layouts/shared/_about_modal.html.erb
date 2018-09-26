@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     	<div class="modal-header">
-        <h4 class="modal-title"> <%= image_tag("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/ivan.jpg", class: "avatar_modal")%> About me </h4>
+        <h4 class="modal-title"> <%= image_tag( Customization.instance.avatar_url.present? ? Customization.instance.avatar_url : "https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/ivan.jpg", class: "avatar_modal")%> About me </h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -10,8 +10,9 @@
       <div class="modal_text">
         <div id="about">
           <% if Customization.instance.about.present? %>
-            <p><%= Customization.instance.about %></p>
-            <% else %>
+            <p><%= simple_format Customization.instance.about %></p>
+
+          <% else %>
             <p>I am Ivan Leschner. I was born in 1987 in a small city called Florencio Varela, 30 km away from the city of Buenos Aires, Argentina.
             </p>
             <p>Around 2004 I started playing guitar with a US brand Strat, and shortly after I began searching for the sound I really wanted.
@@ -22,7 +23,7 @@
 
             <p>Since then, it´s all about you can see on the pictures. I built my first Strat and Teles on my workplace, with the goal of making progresses on each guitar, and giving my costumers the possibility to have a unique instrument that is able to meet not only their expectations, but mines.</p>
             
-          <% end %>
+         <% end %>
         </div>
       </div>     
     </div>
