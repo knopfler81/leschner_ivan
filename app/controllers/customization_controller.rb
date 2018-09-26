@@ -51,7 +51,7 @@ class CustomizationController < ApplicationController
 				:avatar
 				)
 		end
-=======
+		
 	private
 
 	def customization_params
@@ -67,5 +67,4 @@ class CustomizationController < ApplicationController
 			:avatar
 			)
 	end
->>>>>>> master
 end
