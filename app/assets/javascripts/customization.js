@@ -29,6 +29,7 @@ $(function() {
       var reader = new FileReader();
 
       reader.onload = function (e) {
+
         $('#first_section_img_prev').attr('src', e.target.result);
       }
       reader.readAsDataURL(input.files[0]);
@@ -49,6 +50,7 @@ $(function() {
       var reader = new FileReader();
 
       reader.onload = function (e) {
+
         $('#second_section_img_prev').attr('src', e.target.result);
       }
       reader.readAsDataURL(input.files[0]);
@@ -57,6 +59,7 @@ $(function() {
 
   $("#second_section_image_upload").change(function(){
     $('#second_section_img_prev').removeClass('hidden').addClass('tiny_image');
+
     readURL(this);
   });
 });
@@ -76,6 +79,7 @@ $(function() {
 
   $("#third_section_image_upload").change(function(){
     $('#third_section_img_prev').removeClass('hidden').addClass('tiny_image');
+
     readURL(this);
   });
 });

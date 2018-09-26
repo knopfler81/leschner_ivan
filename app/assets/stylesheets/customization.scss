@@ -7,10 +7,17 @@
 }
 
 .set_images, .set_about, .set_colors {
+	h4 {
+		color: $gold;
+	}
+}
+
+.set_images, .set_about {
 	background-color: #fff;
 	padding: 20px;
 	margin-bottom: 40px;
 }
+
 
 .picker {
 	padding: 20px;

@@ -10,5 +10,4 @@ class Customization < ApplicationRecord
 	def self.instance
 		Customization.find_or_create_by(id: INSTANCE_ID)
 	end
-
 end

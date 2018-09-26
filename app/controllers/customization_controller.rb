@@ -1,6 +1,7 @@
 class CustomizationController < ApplicationController
 	before_action  :authorize
 	before_action :find_customization
+
 	
 	def show
 	end
@@ -10,7 +11,6 @@ class CustomizationController < ApplicationController
 	 		redirect_to customization_path, notice: "Successfully updated"
 	 	end
 	end
-
 
 	def reset
 		@customization.background_color = Customization.instance.class.columns_hash['background_color'].default
@@ -22,7 +22,7 @@ class CustomizationController < ApplicationController
 		@customization.menu_color       = Customization.instance.class.columns_hash['menu_color'].default
 		@customization.icon_color       = Customization.instance.class.columns_hash['icon_color'].default
 		@customization.save
-		redirect_to customization_path, notice: "You have successfully reset your customization"
+		redirect_to customization_path, notice: "You have successfully reseted your customization"
 	end
 
 	private
@@ -51,4 +51,21 @@ class CustomizationController < ApplicationController
 				:avatar
 				)
 		end
+=======
+	private
+
+	def customization_params
+		params.require(:customization).permit( 
+			:main_image, :remove_main_image,
+			:first_section_image, :remove_first_section_image,
+			:second_section_image, :remove_second_section_image,
+			:third_section_image, :remove_first_section_image,
+			:menu_color,
+			:body_color,
+			:icon_color,
+			:about,
+			:avatar
+			)
+	end
+>>>>>>> master
 end

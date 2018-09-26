@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :finished_guitars
   resources :videos
   resources :progresses
+
   resource :customization, only: [:show, :update], controller: "customization" do 
      member do
       get :reset
@@ -20,8 +21,4 @@ Rails.application.routes.draw do
    resources :progresses do
     resources :pictures, :only => [:create, :destroy]
   end
-
-
-
-
 end
