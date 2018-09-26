@@ -1,5 +1,5 @@
 class CustomizationController < ApplicationController
-	before_action  :authorize
+	before_action  :authenticate_user!
 	before_action :find_customization
 
 	
@@ -7,7 +7,7 @@ class CustomizationController < ApplicationController
 	end
 
 	def update
-	 	if @customization.update(customization_params)
+	 	if @customization.update_attributes(customization_params)
 	 		redirect_to customization_path, notice: "Successfully updated"
 	 	end
 	end
@@ -51,20 +51,5 @@ class CustomizationController < ApplicationController
 				:avatar
 				)
 		end
-		
-	private
-
-	def customization_params
-		params.require(:customization).permit( 
-			:main_image, :remove_main_image,
-			:first_section_image, :remove_first_section_image,
-			:second_section_image, :remove_second_section_image,
-			:third_section_image, :remove_first_section_image,
-			:menu_color,
-			:body_color,
-			:icon_color,
-			:about,
-			:avatar
-			)
-	end
+	
 end

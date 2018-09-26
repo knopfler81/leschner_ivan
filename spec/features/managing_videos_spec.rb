@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "managing videos" do 
 
-	fixtures :user
+	fixtures :users
 
 	context "The admin is logged in" do 
 

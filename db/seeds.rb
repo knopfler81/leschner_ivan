@@ -1,13 +1,32 @@
 # User.destroy_all
 
-# @user = User.create!(username: 'admin',  password: 'password', password_confirmation: 'password')
+# num = 0
+# 5.times do 
+# 	num += 1
+# 	User.create!(
+# 		email:  "#{num}_user@example.com",
+# 		password: "password")
+# end
+
+# 10.times do 
+# 	Message.create!(
+# 		user_id: [3,4,5].sample,
+# 		read: false,
+# 		replied: false,
+# 		subject: "Hello world!!!",
+# 		content: "Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Nullam cursus lacinia erat. Sed a libero. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Nunc nonummy metus.
+
+# 		Nam at tortor in tellus interdum sagittis. Vivamus euismod mauris. Praesent ac massa at ligula laoreet iaculis. Nunc interdum lacus sit amet orci. Nullam quis ante.
+
+# 	 Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Ut varius tincidunt libero. Curabitur a felis in nunc fringilla tristique. Praesent vestibulum dapibus nibh. Fusce ac felis sit amet ligula pharetra condimentum.")
+# end
 
 
-FinishedGuitar.destroy_all
-Progress.destroy_all
-Video.destroy_all
+# FinishedGuitar.destroy_all
+# Progress.destroy_all
+# Video.destroy_all
 
-puts 'Created user'
+# puts 'Created user'
 
 counter = 0
 

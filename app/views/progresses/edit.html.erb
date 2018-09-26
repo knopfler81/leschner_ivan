@@ -15,7 +15,7 @@
 				<div class="col-12">
 					<% @progress.pictures.each_with_index do | guitar, index| %>
 							<%= image_tag guitar.url, class: "tiny_image" %>
-						<% if current_user %>
+						<% if current_user.admin? %>
 							<%= link_to progress_picture_path(@progress, index), :method => :delete, data: { confirm: "Are you sure you want to delete this image?" }, class: "delete_img_link" do %>
 								<i class="fas fa-trash-alt trash"></i>
 							<% end %>

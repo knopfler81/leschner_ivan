@@ -34,4 +34,8 @@ module ApplicationHelper
 		return Customization.instance.big_title_color if Customization.instance.big_title_color.present?
 		'#000'
 	end
+
+	def admin_conneted?
+		true if (user_signed_in? && current_user.admin?)
+	end
 end

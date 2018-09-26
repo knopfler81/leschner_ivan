@@ -1,8 +1,6 @@
 //= require rails-ujs
 //= require jquery3
-
 //= require bootstrap
-//= require tawk 
 //= require photoswipe
 //= require_tree .
 

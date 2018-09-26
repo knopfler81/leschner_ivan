@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Managing progress" do 
 
-	fixtures :progresses, :user
+	fixtures :progresses, :users
 
 	context "The admin is logged in" do 
 
