@@ -9,4 +9,4 @@ en:
           attributes:
             url:
               blank: "is required"
-              invalid: " is not valid, make sure you don't have any space, and that you have respected the format"
+              invalid: "is not valid, make sure you don't have any space, and that you have respected the format"

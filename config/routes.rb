@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
  devise_scope :user do 
-    get    "/login",  to: "devise/sessions#new"
+    get    "/admin",  to: "devise/sessions#new"
     post   "/signin",  to: "devise/sessions#create"
     delete "/logout", to: "devise/sessions#destroy"
   end

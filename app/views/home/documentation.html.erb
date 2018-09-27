@@ -25,20 +25,18 @@
 						<li><%= link_to "Form to create new Media", new_video_path  %></li>
 						<li><%= link_to "Page that groups all your Media", videos_path %></li>
 					</ul>
-					<h5><li>Messages Board</li></h5>
-					<ul>
-						<li><%#= link_to "Page to groups all the received messages", messages_path %></li>
-						<li> As many pages as received messages</li>
-					</ul>
 					<h5><li>Customization</li></h5>
 						<ul>
 							<li><%= link_to "One page to customize your website", customization_path %></li>
 						</ul>
 					<h5><li>Authentication</li></h5>
 					<ul>
-						<li><%= link_to "A login form", login_path %></li>
+						<li>You have to add <em> /admin</em> after <em>.com/</em>, it will look like <em>https://leschner-guitars.herokuapp.com/admin</em></li>
+						<li>You can stay logged in.</li>
 						<li><%= link_to "Log out", logout_path %></li>
 					</ul>
+					<h5><li>Contact form</li></h5>
+					<li>Contact form</li>
 				</ul>
 			</section>
 			<h2>Finished Guitar & Work In Progress sections *</h2>
@@ -104,27 +102,7 @@
 						<li>Below each Youtube Frame you have the destroy icon <i class="fas fa-trash-alt trash"></i> and the edit icon <i class="fas fa-edit"></i></li>
 					</ul>
 			</section>
-
-			<h2>Messages Board</h2>
-			<hr>
-			<section>
-				<ul>
-					<li>You will find this page under <strong>admin</strong> in the navigation menu <%= link_to "Messages", messages_path %></li>
-					<li>The most recent message will be the first </li>
-					<li>It has an orange envelope if you haven't replied yet</li>
-					<li>It has a green envelope if you have replied</li>
-					<li>Message with the most recent reply (you or the contact) will be on the top of list</li>
-					<li>Answer a message</li>
-					<ul>
-						<li>Click on the message</li>
-						<li>The contact's message is green</li>
-						<li>Write your reply, here too you can format text, and click <strong>Create Comment</strong> to publish, beware, you can't edit nor delete</li>
-						<li>Click <strong>Back</strong> to return to the Messages board</li>
-						<li>The message you just submited is on the top</li>
-					</ul>
-				</ul>
 				
-			</section>
 			<h2>Customiaztion</h2>
 			<hr>
 			<section>
@@ -172,11 +150,11 @@
 					<li>When you are happy and sure, click on <strong>Update Customization</strong></li>
 					<li>If you are not, click on <strong>Reset to default layout</strong></li>
 				</ul>
-
-
-
-
-
+			</section>
+			<section>
+				<h5>Contact form</h5>
+				<li>The visitor can send you an email that you will recieve directly on your mail box</li>
+				<li>This section is not visible if you are logged in</li>
 			</section>
 	</div>
 </div>
