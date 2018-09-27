@@ -1,6 +1,7 @@
-require 'rails_helper'
+unless ENV['CI']
+	require 'rails_helper'
 
- RSpec.describe Video, type: :model do
+ 	RSpec.describe Video, type: :model do
 
 		context "When created" do 
 				my_video =  Video.new(url: "https://www.youtube.com/watch?v=Yozj4ZB98Gg")
@@ -16,7 +17,5 @@ require 'rails_helper'
 				expect(my_video.url).to eq("https://www.youtube.com/embed/Yozj4ZB98Gg")
 			end
 		end
-
-
-
+	end
 end

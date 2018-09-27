@@ -1,7 +1,7 @@
 class ProgressesController < ApplicationController
 	protect_from_forgery
 	before_action :find_progress, only: [:show, :edit, :update, :destroy]
-	before_action :authorize, only: [:new, :create, :destroy]
+	before_action :authenticate_user!, only: [:new, :create, :destroy]
 
 	def index
 		@progresses = Progress.order(created_at: :desc).all

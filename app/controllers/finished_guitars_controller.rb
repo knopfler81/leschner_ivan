@@ -1,7 +1,7 @@
 class FinishedGuitarsController < ApplicationController
   protect_from_forgery
   before_action :find_finished_guitar, only: [:show, :destroy, :edit , :update]
-  before_action :authorize, only: [:new, :create, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :destroy, :updated, :edit]
 
   def index
     @finished_guitars = FinishedGuitar.order(created_at: :desc).all

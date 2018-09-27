@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.feature "managing finished guitar" do 
 
-	fixtures :finished_guitars, :user
+	fixtures :finished_guitars, :users
 
 	context "The admin is logged in" do 
 
@@ -11,9 +11,10 @@ RSpec.feature "managing finished guitar" do
 		end
 
 		scenario "create a new guitar" do 
+
 			visit new_finished_guitar_path
-			fill_in "finished_guitar[title]", with: "Gibson Les Paul"
-			fill_in "finished_guitar[description]", with: "Super guitar...."
+			fill_in "Title", with: "Gibson Les Paul"
+			fill_in "Enter a description", with: "Super guitar...."
 
 			within "#label_uploader" do 
 				within "#span_uploader" do 

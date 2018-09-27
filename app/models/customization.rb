@@ -1,4 +1,5 @@
 class Customization < ApplicationRecord
+
 	mount_uploader :avatar, 							AvatarUploader
 	mount_uploader :main_image, 				  MainImageUploader
 	mount_uploader :first_section_image,  FirstSectionImageUploader

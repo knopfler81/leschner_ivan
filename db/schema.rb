@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_24_164023) do
-
+ActiveRecord::Schema.define(version: 2018_09_26_161220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.integer "message_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "customizations", force: :cascade do |t|
     t.string "main_image"
@@ -27,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_09_24_164023) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "about"
+    t.string "avatar"
     t.string "background_color", default: "#E2E2E2"
     t.string "navbar_color", default: "#141414"
     t.string "primary_color", default: "#AB803E"
@@ -34,7 +42,6 @@ ActiveRecord::Schema.define(version: 2018_09_24_164023) do
     t.string "big_title_color", default: "##141414"
     t.string "navbar_links_color", default: "#CBCBCB"
     t.string "paragraphe_color", default: "#21252A"
-
   end
 
   create_table "finished_guitars", force: :cascade do |t|
@@ -43,6 +50,16 @@ ActiveRecord::Schema.define(version: 2018_09_24_164023) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json "attachments"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "subject"
+    t.text "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "read", default: false
+    t.boolean "replied", default: false
   end
 
   create_table "progresses", force: :cascade do |t|
@@ -54,10 +71,20 @@ ActiveRecord::Schema.define(version: 2018_09_24_164023) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.boolean "admin", default: false
     t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "current_sign_in_at"
+    t.string "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.integer "sign_in_count", default: 0, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "videos", force: :cascade do |t|

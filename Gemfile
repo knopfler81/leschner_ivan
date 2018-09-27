@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 
+
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
@@ -18,7 +19,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'jquery-rails'
 
-gem 'bcrypt', '~> 3.1.7'
+gem 'devise' 
+
 gem 'fog'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem "mini_magick"
@@ -27,6 +29,9 @@ gem 'react-rails'
 
 gem 'photoswipe-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+
+
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
