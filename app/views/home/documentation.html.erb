@@ -1,0 +1,182 @@
+<div class="container">
+	<div id="documentation">
+			<h1>Welcome on Leschner Guitars New Website</h1>
+			
+
+			<h2>Sections introduction</h2>
+			<hr>
+			<section>
+				<p>For any actions that impact the database you will need to be authenticated</p>
+				<ul>
+					<h5><li>Finished Guitars</li></h5>
+						<ul>
+							<li><%= link_to "Form to create new Finished Guitars", new_finished_guitar_path  %></li>
+							<li><%= link_to "Page that groups all your Finished Guitars", finished_guitars_path %></li>
+							<li>As many pages as created Finished Guitars</li>
+						</ul>
+					<h5><li>Work In Progress</li></h5>
+					<ul>
+						<li><%= link_to "Form to create new Work In Progress", new_progress_path  %></li>
+						<li><%= link_to "Page that groups all your Work In Progress", progresses_path %></li>
+						<li>As many pages as created Work In Progress</li>
+					</ul>
+					<h5><li>Media</li></h5>
+					<ul>
+						<li><%= link_to "Form to create new Media", new_video_path  %></li>
+						<li><%= link_to "Page that groups all your Media", videos_path %></li>
+					</ul>
+					<h5><li>Messages Board</li></h5>
+					<ul>
+						<li><%= link_to "Page to groups all the received messages", messages_path %></li>
+						<li><%= link_to "As many pages as received messages" %></li>
+					</ul>
+					<h5><li>Customization</li></h5>
+						<ul>
+							<li><%= link_to "One page to customize your website", customization_path %></li>
+						</ul>
+					<h5><li>Authentication</li></h5>
+					<ul>
+						<li><%= link_to "A login form", login_path %></li>
+						<li><%= link_to "Log out", logout_path %></li>
+					</ul>
+				</ul>
+			</section>
+			<h2>Finished Guitar & Work In Progress sections *</h2>
+			<hr>
+			<section>
+				<h5><strong>Create</strong> a new article</h5>
+				<p>Visit <a href="https://tinyjpg.com/">this website</a>, it will help you to have your images lower wieght to be uploaded</p>
+				<ul>
+					<li>You will find this page under <strong>admin</strong> in the navigation menu <%= link_to "Finished Guitars", new_finished_guitar_path  %></li>
+					<li>Fill in the title and the description</li>
+					<li>In the decription, the text will be formated with the lines breaks and paragraphes</li>
+					<li>Click <strong>Add Files</strong></li>
+					<li>It will open a window from your computer, then select files</li>
+					<li>If you are happy, click <strong>Create 'Finished Guitar'</strong></li>
+					<li>If everything is okay you will be redirected to the article you've just created, overwise you will have an error message and pleased to retry.</li>
+				</ul>
+
+				<h5><strong>Visit</strong> your articles</h5>
+					<ul>
+						<li><%= link_to "Page that groups all your Finished Guitars", finished_guitars_path %></li>
+						<ul>
+							<li>This is where are sorted all you article, the newest the first</li>
+							<li>To access article, just click on it</li>
+							<li>Images: when you hover an image it gets bigger, and if you click it will open the gallery</li>
+							<li>To display the next or previous image, click the little arrows on the side, you can also use your keyboard arrows</li>
+							<li>Close the gallery with the white cross on the top right</li>
+						</ul>
+					</ul>
+
+				<h5><strong>Edit</strong> an existing article</h5>
+				<ul>
+					<li>Visit an article's page</li>
+					<li>Below the images, click on the edit icon <i class="fas fa-edit"></i>
+					<li>You can change title and description</li>
+					<li>You can remove picture, click on trash icon <i class="fas fa-trash-alt trash"></i></li>
+					<li>You can add pictures, click on add pictures</li>
+					<li>If you are happy, click <strong>Update Me</strong></li>
+					<li>If everything is okay you will be redirected to the article you've just edited, overwise you will have an error message and pleased to retry.</li>
+				</ul>
+
+				<h5><strong>Destroy</strong> an existing article</h5>
+				<ul>
+					<li>Visit an article's page</li>
+					<li>Below the images, click on the edit icon <i class="fas fa-edit"></i></li>
+					<li>If you are sure, confirm or not 😅</li>
+				</ul>
+				<small> * Finished Guitar and Work In Progress have exactly the same process</small>
+			</section>
+
+			<h2>Media</h2>
+			<hr>
+			<section>
+				<h5><strong>Create</strong> a new media</h5>
+				<ul>
+					<li>You will find this page under <strong>admin</strong> in the navigation menu <%= link_to "Media", new_video_path  %></li>
+					<li>Fill in the url form</li>
+				 	<li><p>Just go on your youtube profile, open a video and get the link like this one <em>https://www.youtube.com/watch?v=s0DnPuCGwV8</em>, this special format required</li>
+				  <li><p>Mind the little <em>/watch?v=</em> 🤓</p></li>
+				</ul>
+				<h5><strong>Edit/Destroy</strong> an existing media</h5>
+					<ul>
+						<li><%= link_to "Visit the Media page",videos_path  %></li>
+						<li>Below each Youtube Frame you have the destroy icon <i class="fas fa-trash-alt trash"></i> and the edit icon <i class="fas fa-edit"></i></li>
+					</ul>
+			</section>
+
+			<h2>Messages Board</h2>
+			<hr>
+			<section>
+				<ul>
+					<li>You will find this page under <strong>admin</strong> in the navigation menu <%= link_to "Messages", messages_path %></li>
+					<li>The most recent message will be the first </li>
+					<li>It has an orange envelope if you haven't replied yet</li>
+					<li>It has a green envelope if you have replied</li>
+					<li>Message with the most recent reply (you or the contact) will be on the top of list</li>
+					<li>Answer a message</li>
+					<ul>
+						<li>Click on the message</li>
+						<li>The contact's message is green</li>
+						<li>Write your reply, here too you can format text, and click <strong>Create Comment</strong> to publish, beware, you can't edit nor delete</li>
+						<li>Click <strong>Back</strong> to return to the Messages board</li>
+						<li>The message you just submited is on the top</li>
+					</ul>
+				</ul>
+				
+			</section>
+			<h2>Customiaztion</h2>
+			<hr>
+			<section>
+				<h5>Here you become the master!</h5>
+				<ul>
+				<li>You will find this page under <strong>admin</strong> in the navigation menu <%= link_to "Customiaztion", customization_path  %></li>
+				<li>From here you can change almost all</li>
+					<ul>
+						<li>The main<strong>Background Color</strong></li>
+						<li>The <strong>Menu background color</strong></li>
+						<li>The <strong>Menu Tags</strong></li>
+						<li>The <strong>Primary</strong> color</li>
+						<li>The <strong>Secondary</strong> color</li>
+						<li>The <strong>Text</strong> (paragraphes) color</li>
+						<li>The <strong>Big Titles</strong> color</li>
+						<li>The <strong>Cover</strong> image</li>
+						<li>The <strong>Work In Progress</strong> section image</li>
+						<li>The <strong>Finished Guitar </strong> section image</li>
+						<li>The <strong>Media</strong> section image</li>
+						<li>The <strong>Avatar</strong> image</li> 
+						<li>The <strong>About</strong> description</li>
+					</ul>
+				</ul>
+				<h5>Change colors</h5>
+				<ul>
+					<li>Just select the colors with the color pickers, you will see live change</li>
+					<li>You have samples of text and buttons to see what you are changing</li>
+				</ul>
+
+				<h5>Change images</h5>
+				<ul>
+					<li>By default the current used image is diplayed</li>
+					<li>Click <strong>Choose file</strong> to add</li>
+					<li>A window opens, select just one image</li>
+				</ul>
+
+				<h5>Change text</h5>
+				<ul>
+					<li>Defaut text is in the form</li>
+					<li>You can change the text</li>
+				</ul>
+
+				<h5>Validate all the change</h5>
+				<ul>
+					<li>When you are happy and sure, click on <strong>Update Customization</strong></li>
+					<li>If you are not, click on <strong>Reset to default layout</strong></li>
+				</ul>
+
+
+
+
+
+			</section>
+	</div>
+</div>
