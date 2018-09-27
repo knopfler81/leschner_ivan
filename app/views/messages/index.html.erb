@@ -2,55 +2,55 @@
 	<div class="row">
 		<div class="col-12">
   		<div class="received-messages">
-  			<% @messages.each do |message| %>
-					<%= link_to message_path(message) do  %>
+  			<%# @messages.each do |message| %>
+					<%#= link_to message_path(message) do  %>
 						<div class="message">
 							<div class="row">
 								<div class="col-2">
-									<h2><%= request.location.country %></h2>
-									<% if message.comments.count >= 1 %>
+									<h2><%#= request.location.country %></h2>
+									<%# if message.comments.count >= 1 %>
 										<div class="replied">
 											<i class="fa fa-envelope-open icon-message"></i>
 										</div>
-										<% else %>
+										<%# else %>
 										<div class="pending">
 											<i class="fa fa-envelope icon-message"></i>
 										</div>
-									<% end %>
+									<%# end %>
 								</div>
 								<div class="col-10">
 									<div class="row">
 										<div class="col-4">
 											<div class="message-email">
-												<p><%= message.user.email %></p>
+												<p><%#= message.user.email %></p>
 											</div>
 										</div>
 										<div class="col-3 offset-5">
 											<div class="message-date">
-												<% if message.comments.count >= 1 %>
-													<small><%= message.updated_at%></small>
-												<% else %>
-													<small><%= message.created_at %></small>
-												<% end %>
+												<%# if message.comments.count >= 1 %>
+													<small><%#= message.updated_at%></small>
+												<%# else %>
+													<small><%#= message.created_at %></small>
+												<%# end %>
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-8">
 											<div class="message-content">
-												<% if message.comments.count >= 1 %>
-													<p><%= truncate(message.comments.last.content, length: 200) %></p>
-												<% else %>
-													<p><%= truncate(message.content, length: 200) %></p>
-												<% end %>
+												<%# if message.comments.count >= 1 %>
+													<p><%#= truncate(message.comments.last.content, length: 200) %></p>
+												<%# else %>
+													<p><%#= truncate(message.content, length: 200) %></p>
+												<%# end %>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					<% end %>
-  			<% end %>
+					<%# end %>
+  			<%# end %>
   		</div>
 		</div>
 	 </div>

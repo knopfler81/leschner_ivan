@@ -1,44 +1,46 @@
-require "rails_helper"
+#message et comment sont mis de côté pour le moment.
 
-RSpec.feature "managing messages and comments" do
-	fixtures :users, :messages
+# require "rails_helper"
 
-	context "Visitor logged in" do 
+# RSpec.feature "managing messages and comments" do
+# 	fixtures :users, :messages
 
-		scenario "wants to send a message to the website owner" do 
-			nelly = users(:nelly)
-			login_as(nelly)
+# 	context "Visitor logged in" do 
 
-			visit new_message_path
+# 		scenario "wants to send a message to the website owner" do 
+# 			nelly = users(:nelly)
+# 			login_as(nelly)
 
-			fill_in "Subject", with: 'Hey'
-			fill_in "Content", with: 'Hola como esta?'
+# 			visit new_message_path
 
-			click_on "Create Message"
+# 			fill_in "Subject", with: 'Hey'
+# 			fill_in "Content", with: 'Hola como esta?'
 
-			expect(page).to have_content("Message was successfully created.")
-		end
-	end
+# 			click_on "Create Message"
 
-	context "Admin is logged in" do 
+# 			expect(page).to have_content("Message was successfully created.")
+# 		end
+# 	end
+
+# 	context "Admin is logged in" do 
 		
-		before :each do 
-			admin = users(:admin)
-			login_as(admin)
-			@mess = messages(:info)
-		end
+# 		before :each do 
+# 			admin = users(:admin)
+# 			login_as(admin)
+# 			@mess = messages(:info)
+# 		end
 		
-		scenario "read a received message" do 
-			visit message_path(@mess)
-			expect(page).to have_content("Need info")
-		end
+# 		scenario "read a received message" do 
+# 			visit message_path(@mess)
+# 			expect(page).to have_content("Need info")
+# 		end
 
-		scenario "replies to a message", :js do 
-			visit message_path(@mess)
-			fill_in "comment[content]", with: "Hey I am calling you!"
-			click_on "Create Comment"
-			expect(page).to have_content("Comment was successfully created.")
-			expect(page).to have_content("Hey I am calling you!")
-		end
-	end
-end 
+# 		scenario "replies to a message", :js do 
+# 			visit message_path(@mess)
+# 			fill_in "comment[content]", with: "Hey I am calling you!"
+# 			click_on "Create Comment"
+# 			expect(page).to have_content("Comment was successfully created.")
+# 			expect(page).to have_content("Hey I am calling you!")
+# 		end
+# 	end
+# end 

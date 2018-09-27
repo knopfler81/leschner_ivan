@@ -1,7 +1,4 @@
-class Message < ApplicationRecord
-	has_many :comments, dependent: :destroy
-	belongs_to :user
-
-
-
-end
+# class Message < ApplicationRecord
+# 	has_many :comments, dependent: :destroy
+# 	belongs_to :user
+# end

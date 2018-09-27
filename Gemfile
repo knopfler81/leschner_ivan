@@ -19,6 +19,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'jquery-rails'
 
+gem 'mail_form'
+
 gem 'devise' 
 
 gem 'fog'
