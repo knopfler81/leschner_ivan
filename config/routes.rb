@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :comments
-  resources :messages
   devise_for :users
   
   root to: 'home#index'
@@ -10,9 +8,8 @@ Rails.application.routes.draw do
   resources :videos
   resources :progresses
 
-  resources :messages do 
-    resources :comments 
-  end
+  resources :contacts, only: [:new, :create]
+
 
   resource :customization, only: [:show, :update], controller: "customization" do 
      member do
@@ -33,4 +30,12 @@ Rails.application.routes.draw do
    resources :progresses do
     resources :pictures, :only => [:create, :destroy]
   end
+
+  #la fonction message et comment est mise de côté, on garde si besoin...
+
+  #resources :comments
+  #resources :messages
+  # resources :messages do 
+  #   resources :comments 
+  # end
 end

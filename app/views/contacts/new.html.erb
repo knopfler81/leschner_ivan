@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="col-8 offset-2">
+			<%= simple_form_for (@contact) do |f| %>
+				<%= f.input :email, label: false, placeholder: 'Enter your email' %>
+				<%= f.input :name, label: false, placeholder: 'Your name'%>
+				<%= f.input :message, as: :text, input_html: {rows: 8}, label: false, placeholder: "Your message" %>
+				<%= f.button :submit, "Send message", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>
