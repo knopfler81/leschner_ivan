@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   root to: 'home#index'
+  get "/documentation", to: "home#documentation"
   resources :finished_guitars
   resources :videos
   resources :progresses
