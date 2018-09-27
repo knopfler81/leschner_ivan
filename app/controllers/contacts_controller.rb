@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:notice] = "Email Sent"
+      redirect_to root_path
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
