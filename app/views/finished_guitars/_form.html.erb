@@ -6,15 +6,23 @@
 	<%= simple_form_for @finished_guitar, html: { multipart: true } do |f| %>
 		<%= f.input :title, label: false, placeholder: "Title", autofocus: true %>
 		<%= f.input :description, as: :text, input_html: {rows: "10"}, label: false, placeholder: "Enter a description"%>
-			<br><br>
-				<label class="btn btn-primary" id="label_uploader">
-					Add Files
-					<span id="span_uploader" >
-						<%= f.file_field :attachments, multiple: true %>
-					</span>
-				</label>
-			<br><br>
-		<%= f.button :submit, class: "btn btn-primary" %>
-	<% end %>
 	</div>
+
+	<div class="col-md-10 offset-md-1 col-12">
+		<div class="image-upload-wrap">
+			<%= f.file_field :attachments, multiple: true, class: "file-upload-input", id: "files" %>
+			<h3>Drag and drop your pictures*</h3>
+			<div id="result"></div>	
+		</div>
+		<hr>
+		<em>*Did you think to resize your images? Do it<a href="https://tinyjpg.com/"> <strong>here!</strong></a></em>
+	
+	</div>
+	
+	<div class="col-md-10 offset-md-1 col-12">
+		<br><br>
+		<%= f.button :submit, class: "btn btn-primary" %>	
+	</div>
+<% end %>
+
 </div>

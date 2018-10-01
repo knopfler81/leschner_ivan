@@ -10,17 +10,14 @@ RSpec.feature "managing finished guitar" do
 			login_as :admin
 		end
 
-		scenario "create a new guitar" do 
+		scenario "create a new guitar", :js do 
 
 			visit new_finished_guitar_path
 			fill_in "Title", with: "Gibson Les Paul"
 			fill_in "Enter a description", with: "Super guitar...."
 
-			within "#label_uploader" do 
-				within "#span_uploader" do 
-					attach_file("finished_guitar[attachments][]" , Rails.root.join("spec/assets/images/img_2.jpg"))
-				end
-			end
+
+			attach_file("finished_guitar[attachments][]" , Rails.root.join("spec/assets/images/img_2.jpg"))
 
 			click_on "Create Finished guitar"
 
@@ -49,11 +46,9 @@ RSpec.feature "managing finished guitar" do
 
 			click_on "Add pictures"
 
-			within "#label_uploader_2" do 
-				within "#span_uploader_2" do 
-					attach_file("finished_guitar[attachments][]" , Rails.root.join("spec/assets/images/img_2.jpg"))
-				end
-			end
+
+			attach_file("finished_guitar[attachments][]" , Rails.root.join("spec/assets/images/img_2.jpg"))
+
 
 			click_on "Update"
 			
