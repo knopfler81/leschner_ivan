@@ -10,17 +10,13 @@ RSpec.feature "Managing progress" do
 			login_as :admin
 		end
 
-		scenario "create progress" do 
+		scenario "create progress", :js do 
 			visit new_progress_path
 			fill_in "progress[title]", with: "Gibson Les Paul"
 			fill_in "progress[description]", with: "Super progresse...."
 
-			within "#prog_label_uploader" do 
-				within "#prog_span_uploader" do 
-					attach_file("progress[pictures][]", Rails.root.join("spec/assets/images/img_2.jpg"))
-				end
-			end
-
+			attach_file("progress[pictures][]", Rails.root.join("spec/assets/images/img_2.jpg"))
+		
 			click_on "Create Progress"
 
 			expect(page).to have_content("Work In Progress was successfully created")
@@ -45,12 +41,8 @@ RSpec.feature "Managing progress" do
 			find(".edit_link").click
 			click_on "Add pictures"
 
-			within "#prog_label_uploader_2" do 
-				within "#prog_span_uploader_2" do 
-					attach_file("progress[pictures][]" , [Rails.root.join("spec/assets/images/img_1.jpg"), Rails.root.join("spec/assets/images/img_2.jpg") ])
-				end
-			end
-
+			attach_file("progress[pictures][]", [Rails.root.join("spec/assets/images/img_1.jpg"), Rails.root.join("spec/assets/images/img_2.jpg") ])
+		
 			click_on "Update"
 			
 			expect(page).to have_content("Successfully added")

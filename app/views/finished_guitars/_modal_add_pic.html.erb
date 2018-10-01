@@ -8,19 +8,26 @@
         </button>
       </div>
       <div class="modal_text">
-				<div class="container">
+        <div class="container">
           <%= simple_form_for @finished_guitar, url: finished_guitar_attachments_path(@finished_guitar), method: :post do |f| %>
-            <label class="btn btn-primary" id="label_uploader_2">
-              Choose Files
-              <span id="span_uploader_2" >
-                <%= f.file_field :attachments, multiple: true, class: "input_file" %>
-              </span>
-            </label>
-           <%= f.button :submit, "Update", class: "btn btn-primary" %>
-         <% end %>    
+            <div class="row">
+              <div class="col-12">
+                <div class="image-upload-wrap">
+                  <%= f.file_field :attachments, multiple: true, class: "file-upload-input", id: "files" %>
+                  <h3>Drag and drop your pictures*</h3>
+                  <div id="result"></div> 
+                </div>   
+              <hr>
+              <em>*Did you think to resize your images? Do it<a href="https://tinyjpg.com/"> <strong>here!</strong></a></em>
+              </div>
+              <div class="col-3 offset-9">
+                <br>
+                <%= f.button :submit, "Update", class: "btn btn-primary" %>
+              </div>
+            </div>
+          <% end %>    
         </div>
       </div>     
     </div>
   </div>
 </div>
-
