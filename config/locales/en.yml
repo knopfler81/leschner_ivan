@@ -2,11 +2,19 @@ en:
   activerecord:
     attributes:
       video:
-        url: "Youtube URL"
+        url: Youtube URL
+      customization:
+        avatar: Avatar
+        main_image: Cover image
+        first_section_image: Work In Progress Image
+        second_section_image: Finished Guitar Image
+        third_section_image: Media Image
     errors:
       models:
         video:
           attributes:
             url:
-              blank: "is required"
-              invalid: "is not valid, make sure you don't have any space, and that you have respected the format"
+              blank: is required
+              invalid: is not valid, make sure you don't have any space, and that you have respected the format
+        finished_guitars:
+          attachments: Your image are to heavy

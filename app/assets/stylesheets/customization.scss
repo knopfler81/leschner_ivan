@@ -18,6 +18,14 @@
 	margin-bottom: 40px;
 }
 
+.errors_explanation{
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 40px;
+	h2, li {
+		color: red;
+	}
+}
 
 .picker {
 	padding: 20px;
@@ -31,4 +39,35 @@
 .btn-reset:hover {
 	background-color: #E51515;
 	color: #fff;
+}
+
+
+.error {
+	border: 3px dashed #E51515;
+	padding: 10px;
+}
+
+.image_error {
+	border              : 2px solid red;
+	object-fit          : cover;
+	width               : 80px;
+	height              : 80px;
+	background-position : center center;
+	background-repeat   : no-repeat;
+	display             : inline-block;
+	position            : relative;
+}
+
+.img_error {
+	color: #E51515;
+	padding-top: 10px;
+}
+
+#main_img_error, 
+#first_section_img_error, 
+#second_section_img_error, 
+#third_section_img_error,
+#avatar_error {
+	padding-top: 10px;
+	color: #E51515;
 }
