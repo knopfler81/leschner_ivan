@@ -3,6 +3,12 @@ en:
     attributes:
       video:
         url: "Youtube URL"
+      customization:
+        avatar: "Avatar"
+        main_image: "Cover image"
+        first_section_image: "Work In Progress Image"
+        second_section_image: "Finished Guitar Image"
+        third_section_image: "Media Image"
     errors:
       models:
         video:
@@ -10,3 +16,4 @@ en:
             url:
               blank: "is required"
               invalid: "is not valid, make sure you don't have any space, and that you have respected the format"
+        

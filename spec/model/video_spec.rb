@@ -1,4 +1,4 @@
-unless ENV['CI']
+
 	require 'rails_helper'
 
  	RSpec.describe Video, type: :model do
@@ -18,4 +18,3 @@ unless ENV['CI']
 			end
 		end
 	end
-end

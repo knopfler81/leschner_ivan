@@ -9,6 +9,8 @@ class CustomizationController < ApplicationController
 	def update
 	 	if @customization.update_attributes(customization_params)
 	 		redirect_to customization_path, notice: "Successfully updated"
+	 	else
+	 		render :show, alert: "WOOOOOPS"
 	 	end
 	end
 

@@ -7,6 +7,18 @@
 	</div>
 	<div class="content-custo">
 		<%= simple_form_for @customization, html: { multipart: true }  do |f| %>
+			<div class="<%= 'errors_explanation' if @customization.errors.any? %>">
+				<% if @customization.errors.any? %>
+					<div id="error_explanation">
+						<h2><%= pluralize(@customization.errors.count, "error") %> prohibited this customization from being saved:</h2>
+						<ul>
+							<% @customization.errors.full_messages.each do |msg| %>
+								<li><%= msg %></li>
+							<% end %>
+						</ul>
+					</div>
+				<% end %>
+			</div>
 			<div class="set_colors">
 				<h2>Colors</h2>
 				<hr>
@@ -93,70 +105,40 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="custo-boxes">
+								<div class="<%= 'error' if @customization.errors.include?('main_image') %>">
 								<h4><i class="fas fa-image icon"></i> Cover</h4>
 								<hr>
-								<div class="row">
-									<div class="col-6">
-										<%= image_tag @customization.main_image_url, class: "tiny_image" %>
-									</div>
-									<div class="col-6">
-										<label class="btn btn-primary" >Choose file</label>
-										<%= f.file_field :main_image, id: "main_image_upload", class: "input_file" %><br/> 
-										<%= f.hidden_field :main_image_cache %>
-										<img id="main_img_prev" src="#" class= "hidden"/> 
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-6">
-							<div class="custo-boxes">
-								<h4><i class="fas fa-image icon"></i> Work In Progress</h4>
-								<hr>
-								<div class="row">
-									<div class="col-6">
-										<%= image_tag @customization.first_section_image_url, class: "tiny_image" %>
-									</div>
-									<div class="col-6">
-										<label class="btn btn-primary" >Choose file</label>
-										<%= f.file_field :first_section_image, id: "first_section_image_upload", class: "input_file" %><br/> 
-										<%= f.hidden_field :first_section_image_cache %>
-										<img id="first_section_img_prev" src="#"  class= "hidden"/> 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<div class="custo-boxes">
-								<h4><i class="fas fa-image icon"></i> Finished Guitar</h4>
-								<hr>
-								<div class="row">
-									<div class="col-6">
-										<%= image_tag @customization.second_section_image_url, class: "tiny_image" %>
-									</div>
-									<div class="col-6">
-										<label class="btn btn-primary" >Choose file</label>
-										<%= f.file_field :second_section_image, id: "second_section_image_upload" , class: "input_file"%><br/> 
-										<%= f.hidden_field :second_section_image_cache %>
-										<img id="second_section_img_prev" src="#"  class= "hidden"/> 
+									<div class="row">
+										<div class="col-6">
+											<%= image_tag @customization.main_image_url, class: "tiny_image" %>	
+										</div>
+										<div class="col-6">
+											<label class="btn btn-primary" >Choose file</label>
+											<%= f.file_field :main_image, id: "main_image_upload", class: "input_file" %><br/>
+											<%= f.hidden_field :main_image_cache %>
+											<img id="main_img_prev" src="#" class= "hidden"/> 
+											<p id="main_img_error"></p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image icon"></i> Media</h4>
-								<hr>
-								<div class="row">
-									<div class="col-6">
-										<%= image_tag @customization.third_section_image_url, class: "tiny_image" %>
-									</div>
-									<div class="col-6">
-										<label class="btn btn-primary" >Choose file</label>
-										<%= f.file_field :third_section_image, id: "third_section_image_upload", class: "input_file" %><br/> 
-										<%= f.hidden_field :third_section_image_cache %>
-										<img id="third_section_img_prev" src="#"  class= "hidden"/> 
+								<div class="<%= 'error' if @customization.errors.include?('first_section_image') %>">
+									<h4><i class="fas fa-image icon"></i> Work In Progress</h4>
+									<hr>
+									<div class="row">
+										<div class="col-6">
+											<%= image_tag @customization.first_section_image_url, class: "tiny_image" %>
+										</div>
+										<div class="col-6">
+											<label class="btn btn-primary" >Choose file</label>
+											<%= f.file_field :first_section_image, id: "first_section_image_upload", class: "input_file" %><br/> 
+											<%= f.hidden_field :first_section_image_cache %>
+											<img id="first_section_img_prev" src="#"  class= "hidden"/> 
+											<p id="first_section_img_error"></p>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -165,17 +147,62 @@
 					<div class="row">
 						<div class="col-6">
 							<div class="custo-boxes">
-								<h4><i class="fas fa-image icon"></i> Avatar</h4>
-								<hr>
-								<div class="row">
-									<div class="col-6">
-										<%= image_tag @customization.avatar_url, class: "tiny_image" %>
+								<div class="<%= 'error' if @customization.errors.include?('second_section_image') %>">
+									<h4><i class="fas fa-image icon"></i> Finished Guitar</h4>
+									<hr>
+									<div class="row">
+										<div class="col-6">
+											<%= image_tag @customization.second_section_image_url, class: "tiny_image" %>
+										</div>
+										<div class="col-6">
+											<label class="btn btn-primary" >Choose file</label>
+											<%= f.file_field :second_section_image, id: "second_section_image_upload" , class: "input_file"%><br/> 
+											<%= f.hidden_field :second_section_image_cache %>
+											<img id="second_section_img_prev" src="#"  class= "hidden"/>
+											<p id="second_section_img_error"></p>
+										</div>
 									</div>
-									<div class="col-6">
-										<label class="btn btn-primary" >Choose file</label>
-										<%= f.file_field :avatar, id: "avatar_upload", class: "input_file" %><br/> 
-										<%= f.hidden_field :avatar_cache %>
-										<img id="avatar_prev" src="#"  class= "hidden"/> 
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="custo-boxes">
+								<div class="<%= 'error' if @customization.errors.include?('third_section_image') %>">
+									<h4><i class="fas fa-image icon"></i> Media</h4>
+									<hr>
+									<div class="row">
+										<div class="col-6">
+											<%= image_tag @customization.third_section_image_url, class: "tiny_image" %>
+										</div>
+										<div class="col-6">
+											<label class="btn btn-primary" >Choose file</label>
+											<%= f.file_field :third_section_image, id: "third_section_image_upload", class: "input_file" %><br/> 
+											<%= f.hidden_field :third_section_image_cache %>
+											<img id="third_section_img_prev" src="#"  class= "hidden"/> 
+											<p id="third_section_img_error"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="custo-boxes">
+								<div class="<%= 'error' if @customization.errors.include?('avatar') %>">
+									<h4><i class="fas fa-image icon"></i> Avatar</h4>
+									<hr>
+									<div class="row">
+										<div class="col-6">
+											<%= image_tag @customization.avatar_url, class: "tiny_image" %>
+										</div>
+										<div class="col-6">
+											<label class="btn btn-primary" >Choose file</label>
+											<%= f.file_field :avatar, id: "avatar_upload", class: "input_file" %><br/> 
+											<%= f.hidden_field :avatar_cache %>
+											<img id="avatar_prev" src="#"  class= "hidden"/> 
+											<p id="avatar_error"></p>
+										</div>
 									</div>
 								</div>
 							</div>
