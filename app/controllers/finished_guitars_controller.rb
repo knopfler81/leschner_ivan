@@ -21,7 +21,7 @@ class FinishedGuitarsController < ApplicationController
        format.html { redirect_to @finished_guitar, notice: 'Guitar was successfully created.' }
        format.json { render :show, status: :created, location: @finished_guitar }
      else
-       format.html { render :new }
+       format.html { render :new , notice: 'Wooops something went wrong'}
        format.json { render json: @finished_guitar.errors, status: :unprocessable_entity }
      end
    end
@@ -34,7 +34,7 @@ class FinishedGuitarsController < ApplicationController
     if @finished_guitar.update(finished_guitar_params)
       redirect_to @finished_guitar, notice: "Guitar was successfully updated"
     else
-      render :edit, alert: "Something went wrong"
+      render :edit, alert: "Woops something went wrong"
     end
   end
 
