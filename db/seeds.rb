@@ -36,16 +36,16 @@ counter = 0
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		attachments: [
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg")
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_1.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_2.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_3.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_4.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_5.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_6.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_7.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_8.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_9.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_10.jpg"))
 	].shuffle)
 	counter += 1
 
@@ -61,16 +61,16 @@ counter = 0
 		title:  Faker::Music.instrument,
 		description: Faker::Lorem.paragraph(3),	
 		pictures: [
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_1.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_2.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_3.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_4.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_5.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_6.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_7.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_8.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_9.jpg"),
-		open("https://s3-eu-west-1.amazonaws.com/leschnerguitars/images_site/seeds/image_10.jpg")
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_1.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_2.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_3.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_4.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_5.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_6.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_7.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_8.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_9.jpg")),
+		File.open(File.join(Rails.root,"app/assets/images/seeds/image_10.jpg"))
 	].shuffle)
 	counter += 1
 

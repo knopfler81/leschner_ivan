@@ -17,12 +17,6 @@ class Customization < ApplicationRecord
 	validates :third_section_image,  file_size: { less_than: 0.5.megabytes }
 
 
-	# [:avatar, :main_image, :first_section_image, :second_section_image, :third_section_image].each do |meth|
-	#  	define_method "#{meth}_error" do
- #  		errors.messages[meth.to_sym] <<  "The image should be 1Mo max"
- #  	end
- #  end
-
 
 	INSTANCE_ID =  87
 
