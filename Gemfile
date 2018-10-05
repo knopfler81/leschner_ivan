@@ -20,6 +20,7 @@ gem 'webpacker'
 gem 'jquery-rails'
 
 gem 'mail_form'
+gem 'meta-tags'
 
 gem 'devise' 
 

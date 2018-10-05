@@ -8,6 +8,23 @@ class ProgressesController < ApplicationController
 	end
 
 	def show
+		set_meta_tags  title: @progress.title,
+									  site: 'Leschner Guitars',
+									  description: @progress.description,
+									  keywords: ['Ivan Leschner', 'Luthier' , 'Buenos Aires' , 'Argentina'],
+									  og: {
+									    title: "Leschner Guitars",
+									    description: @progress.description,
+									    type: "website",
+									    url: progress_url(@progress),
+									    image: @progress.pictures.first
+									  },
+									  twitter: {
+									    card: "description",
+									    title: @progress.title,
+									    description: @progress.description,
+									    image: @progress.pictures.first
+									  }
 	end
 
 	def new

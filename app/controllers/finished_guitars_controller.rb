@@ -8,6 +8,23 @@ class FinishedGuitarsController < ApplicationController
   end
 
   def show
+    set_meta_tags title: @finished_guitar.title,
+                  site: 'Leschner Guitars',
+                  description: @finished_guitar.description,
+                  keywords: ['Ivan Leschner', 'Luthier' , 'Buenos Aires' , 'Argentina'],
+                  og: {
+                    title: "Leschner Guitars",
+                    description: @finished_guitar.description,
+                    type: "website",
+                    url: finished_guitar_url(@finished_guitar),
+                    image: @finished_guitar.attachments.first
+                  },
+                  twitter: {
+                    card: "description",
+                    title: @finished_guitar.title,
+                    description: @finished_guitar.description,
+                    image: @finished_guitar.attachments.first
+                  }
   end
 
   def new
