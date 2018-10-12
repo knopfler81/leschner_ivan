@@ -92,6 +92,7 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = { host: 'www.leschnerguitars.com' }
+
   config.action_mailer.delivery_method = :smtp
 
 
