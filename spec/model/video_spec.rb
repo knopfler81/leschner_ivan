@@ -3,7 +3,7 @@
 
  	RSpec.describe Video, type: :model do
 
-		context "When created" do 
+		context "When created", :skip do 
 				my_video =  Video.new(url: "https://www.youtube.com/watch?v=Yozj4ZB98Gg")
 
 			it { should validate_presence_of(:url) }
