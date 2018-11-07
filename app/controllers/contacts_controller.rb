@@ -7,12 +7,14 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.request = request
-    if @contact.deliver
-      flash.now[:notice] = "Email Sent"
-      redirect_to root_path
-    else
-      flash.now[:error] = 'Cannot send message.'
-      render :new
+    if verify_recaptcha(model: @contact)
+      if @contact.deliver
+        flash.now[:notice] = "Email Sent"
+        redirect_to root_path
+      else
+        flash.now[:error] = 'Cannot send message.'
+        render :new
+      end
     end
   end
 
