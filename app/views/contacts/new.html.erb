@@ -5,6 +5,7 @@
 				<%= f.input :email, label: false, placeholder: 'Enter your email' %>
 				<%= f.input :name, label: false, placeholder: 'Your name'%>
 				<%= f.input :message, as: :text, input_html: {rows: 8}, label: false, placeholder: "Your message" %>
+				<%= recaptcha_tags %>
 				<%= f.button :submit, "Send message", class: "btn btn-primary" %>
 			<% end %>
 		</div>
