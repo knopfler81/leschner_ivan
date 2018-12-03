@@ -1,4 +1,4 @@
-<% content_for :meta_title, "#{@progress.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_title, "#{@progress.title} | #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @progress.description %>
 <% content_for :meta_image, image_url(@progress.pictures.first.url) if @progress.pictures.any? %>
 <div class="container">

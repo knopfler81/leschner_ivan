@@ -1,4 +1,4 @@
-<% content_for :meta_title, "#{@finished_guitar.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_title, "#{@finished_guitar.title} | #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, @finished_guitar.description %>
 <% content_for :meta_image, image_url(@finished_guitar.attachments.first.url) if @finished_guitar.attachments.any? %>
 <div class="container">

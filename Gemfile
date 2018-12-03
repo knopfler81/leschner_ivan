@@ -8,7 +8,6 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 
-
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
@@ -32,7 +31,7 @@ gem 'file_validators'
 gem 'react-rails'
 
 gem 'photoswipe-rails'
-gem 'faker', '~> 1.6', '>= 1.6.6'
+gem 'faker', '~> 1.9', '>= 1.9.1'
 
 
 gem 'geocoder'
