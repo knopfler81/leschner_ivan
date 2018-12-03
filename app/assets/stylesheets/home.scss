@@ -12,6 +12,11 @@
 }
 
 
+.modal-title {
+  color: #AB803E;
+  font-size: 30px;
+}
+
 .company-work {
   text-align                   : center;
   margin                       : 30px 60px;
@@ -23,11 +28,13 @@
   position                     : relative;
   z-index                      : 5;
 
-    h1 {
+    .main-title {
       font-size                    : 40px;
     }
-    h2 {
-      font-size                    : 20px;
+
+    .secondary-title {
+      color: #AB803E;
+      font-size: 20px;
     }
    }
 
