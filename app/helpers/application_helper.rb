@@ -35,7 +35,7 @@ module ApplicationHelper
 		'#000'
 	end
 
-	def admin_conneted?
+	def admin_connected?
 		true if (user_signed_in? && current_user.admin?)
 	end
 end

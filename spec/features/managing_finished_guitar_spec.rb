@@ -16,7 +16,6 @@ RSpec.feature "managing finished guitar" do
 			fill_in "Title", with: "Gibson Les Paul"
 			fill_in "Enter a description", with: "Super guitar...."
 
-
 			attach_file("finished_guitar[attachments][]" , Rails.root.join("spec/assets/images/img_2.jpg"))
 
 			click_on "Create Finished guitar"
@@ -38,7 +37,7 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Guitar was successfully updated")
 		end
 
-		scenario "add images for a guitar" do
+		scenario "add images for a guitar", :skip do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 
@@ -55,7 +54,7 @@ RSpec.feature "managing finished guitar" do
 			expect(page).to have_content("Successfully added")
 		end
 
-		scenario "remove some images from a finished guitar" do
+		scenario "remove some images from a finished guitar", :skip do
 			guitar = finished_guitars(:gibson)
 			visit finished_guitar_path(guitar)
 

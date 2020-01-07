@@ -23,7 +23,7 @@
 		<div class="col-md-4">
 			<hr>
 			<%= link_to "<<", finished_guitars_path, class:"btn btn-primary" %>
-			<% if admin_conneted? %>
+			<% if admin_connected? %>
 				<%= link_to edit_finished_guitar_path(@finished_guitar), class: "btn btn-primary edit_link" do %>	
 					<i class="fas fa-edit edit"></i>
 				<% end %>

@@ -37,6 +37,7 @@ gem 'faker', '~> 1.9', '>= 1.9.1'
 gem 'geocoder'
 
 gem "recaptcha", require: "recaptcha/rails"
+gem 'sitemap_generator'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
