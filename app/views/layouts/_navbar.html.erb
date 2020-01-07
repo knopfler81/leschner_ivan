@@ -5,6 +5,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="navbarSupportedContent" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav">
+        <% unless admin_connected? %>
+          <li class="nav-item">
+            <%= link_to new_contact_path, class: "nav-link" do %>
+              <i class="fas fa-envelope"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to "https://www.facebook.com/ivan.leschner", class: "nav-link" do %>
+            <i class="fab fa-facebook"></i>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "https://www.instagram.com/leschnerguitars/?hl=fr", class: "nav-link" do  %>
+            <i class="fab fa-instagram"></i>
+          <% end %>
+        </li>
+      </ul>
+
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item">
           <%= link_to "ABOUT", "#about_modal", "data-toggle"=>"modal", "data-target"=>".bd-example-modal-lg", class: "nav-link" %>
@@ -18,13 +38,8 @@
         <li class="nav-item">
           <%= link_to "MEDIA", videos_path, class: "nav-link" %>
         </li>
-        <% unless admin_conneted? %>
-          <li class="nav-item">
-            <%= link_to new_contact_path, class: "nav-link" do %>
-              <i class="icon-contact fas fa-envelope"></i>
-            <% end %>
-          </li>
-        <% end %>
+
+
  
         <% if user_signed_in? && current_user.admin? %>
           <li class="nav-item dropdown">
