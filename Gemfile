@@ -24,7 +24,7 @@ gem 'meta-tags'
 gem 'devise' 
 
 gem 'fog'
-gem 'carrierwave', '~> 1.2', '>= 1.2.3'
+gem 'carrierwave', '~> 1.3'
 gem "mini_magick"
 gem 'file_validators'
 
